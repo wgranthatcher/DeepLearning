@@ -1,0 +1,8 @@
+PLOTS:
+  - DONE - epoch batch 3d
+  - make 2d matplot graph of #neuron vs acc for 31Oct Data
+  - make 3d dropout_rate vs weight for 06NovTestMaster #with class_weight
+
+
+Grids:
+  final test grid

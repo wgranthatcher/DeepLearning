@@ -1,0 +1,11 @@
+OCT 31 --  Time Graph file,   neurons vs time  (made in excel already but probably should stay consistent and use matplotlib
+
+NOV 1 Master -- 3D Dropout/Weight/Accuracy
+
+NOV 9 Compiled --  2D Accuracy vs Training Ratio (multi line for different models)
+		-- 2D F1 Score vs Training Ratio (multi line for different models)
+		-- 2D Time vs Training Ratio (multi line for different models)
+
+
+
+

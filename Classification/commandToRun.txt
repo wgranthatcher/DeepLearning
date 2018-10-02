@@ -1,0 +1,1 @@
+python -m Classification.KTFBinClass --good_path <good_path> --mal_path <mal_path> --adverse <IF USING ADVERSE> --mode [full or grid] --epochs <num> --test_ratio <20,40,60,80> --batch_size <num> --neurons <num> --optimizer <optimizer> --weight_constraint <num> --dropout <10,20,30...> --model <oneLayer fourSame fourDecr> --splits <num cv splits>

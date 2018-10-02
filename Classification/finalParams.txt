@@ -1,0 +1,6 @@
+10 batch size
+16 epochs
+No class weight
+Dropout 0.1
+Weight 5
+Nadam
