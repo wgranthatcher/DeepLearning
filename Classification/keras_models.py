@@ -96,3 +96,24 @@ def create_dualInputLarge(input_ratio, feat_width, perm_width, neurons=32, dropo
     model = Model(inputs=[perm_input, feat_input], outputs=output)
     model.compile(loss='binary_crossentropy', optimizer='nadam', metrics=['accuracy'])
     return model
+
+#1000-500-250-100-10-1 Model  -WGH
+def create_thousand_layer(data_width, neurons=25, optimizer='adam', dropout_rate=0.1, weight_constraint=0):
+    #baseline Model
+    model = Sequential()
+    #The first param in Dense is the number of neurons in the first hidden layer
+    #model.add(Dense(neurons, input_dim=22300, kernel_initializer='normal', activation='relu',kernel_constraint=maxnorm(weight_constraint) ))
+    model.add(Dense(1000, input_dim=data_width, kernel_initializer='normal', activation='relu'))
+    model.add(Dropout(dropout_rate))
+    model.add(Dense(500, input_dim=data_width, kernel_initializer='normal', activation='relu'))
+    model.add(Dropout(dropout_rate))
+    model.add(Dense(250, input_dim=data_width, kernel_initializer='normal', activation='relu'))
+    model.add(Dropout(dropout_rate))
+    model.add(Dense(100, input_dim=data_width, kernel_initializer='normal', activation='relu'))
+    model.add(Dropout(dropout_rate))
+    model.add(Dense(10, input_dim=data_width, kernel_initializer='normal', activation='relu'))
+    model.add(Dropout(dropout_rate))
+    model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
+    # Compile model
+    model.compile(loss='binary_crossentropy', optimizer=optimizer, metrics=['accuracy'])
+    return model
