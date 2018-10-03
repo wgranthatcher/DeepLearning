@@ -4,7 +4,7 @@ import sys
 import argparse
 import datetime
 
-from .keras_models import create_binaryDecrease, create_fourDecrLayer, create_fourSameLayer, create_one_layer
+from .keras_models import create_binaryDecrease, create_fourDecrLayer, create_fourSameLayer, create_one_layer, create_thousand_layer
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.model_selection import StratifiedShuffleSplit, cross_validate, GridSearchCV
 from sklearn.feature_extraction.text import CountVectorizer
@@ -136,6 +136,11 @@ def full_run(modelName, features, labels, train_ratio, args):
                                 verbose=2)
     elif modelName == "fourDecr":
         model = KerasClassifier(build_fn=create_fourDecrLayer, batch_size=batch_size, epochs=epochs, neurons=neurons,
+                                optimizer=optimizer, weight_constraint=weight_constraint, dropout_rate=dropout_rate,
+                                verbose=2)
+    #Added Thousand Layer  -WGH
+    elif modelName == "thouLayer":
+        model = KerasClassifier(build_fn=create_thousand_layer, batch_size=batch_size, epochs=epochs, neurons=neurons,
                                 optimizer=optimizer, weight_constraint=weight_constraint, dropout_rate=dropout_rate,
                                 verbose=2)
 
