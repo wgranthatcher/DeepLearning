@@ -1,6 +1,6 @@
 from keras.models import Sequential, Model
 from keras.constraints import maxnorm
-from keras.layers import Merge, Dense, Dropout, Input, concatenate
+from keras.layers import merge, Dense, Dropout, Input, concatenate
 from keras.optimizers import Nadam
 
 def create_one_layer(data_width, neurons=25, optimizer='adam', dropout_rate=0.0, weight_constraint=0):
