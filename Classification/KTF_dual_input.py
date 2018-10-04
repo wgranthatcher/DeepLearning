@@ -12,7 +12,7 @@ from sklearn.metrics import confusion_matrix
 from .keras_models import create_one_layer, create_dualInputSimple, create_dualInputLarge
 
 from keras.wrappers.scikit_learn import KerasClassifier
-from keras.layers import Merge, Dense, Dropout, Input, concatenate
+from keras.layers import merge, Dense, Dropout, Input, concatenate
 from keras.models import Model
 from keras.models import Sequential
 from keras.constraints import maxnorm
