@@ -3,6 +3,7 @@ import timeit
 import pandas as pd
 import datetime
 import argparse
+import sys
 
 from functools import partial
 from nltk.tokenize.regexp import regexp_tokenize
@@ -47,6 +48,11 @@ def vectorize(good_path, mal_path):
     with open(mal_path) as f:
         mal_samples = f.readlines()
 
+    print("Benign Size: ")
+    print(sys.getsizeof(ben_samples))
+    print("Malware Size: ")
+    print(sys.getsizeof(mal_samples))
+
     samples = ben_samples + mal_samples
 
     labels = np.array([])
@@ -54,6 +60,9 @@ def vectorize(good_path, mal_path):
         labels = np.append(labels, 0)
     for x in mal_samples:
         labels = np.append(labels, 1)
+
+    print("Samples: ")
+    print(sys.getsizeof(samples))
 
     #regular expressions for each desired data type
     perm_pattern = "(?:\w|\.)+(?:permission).(?:\w|\.)+"
@@ -64,19 +73,41 @@ def vectorize(good_path, mal_path):
     feat_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=feat_pattern))
     comb_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=comb_pattern))
 
+    print("Perm Vect: ")
+    print(sys.getsizeof(perm_vect))
+    print(sys.getsizeof(feat_vect))
+    print(sys.getsizeof(comb_vect))
+
     time0 = timeit.default_timer()
     #each vectorizer tokenizes via fit_transform() and then is converted to a dense vector
     perm_inputs_sparse = perm_vect.fit_transform(samples)
     perm_inputs_dense = perm_inputs_sparse.todense()
     perm_inputs = np.array(perm_inputs_dense)
 
+    print("Permissions: ")
+    print("Sparse: %d" % sys.getsizeof(perm_inputs_sparse))
+    print("Dense: %d" % sys.getsizeof(perm_inputs_dense))
+    print("np.array: %d" % sys.getsizeof(perm_inputs))
+
     feat_inputs_sparse = feat_vect.fit_transform(samples)
     feat_inputs_dense = feat_inputs_sparse.todense()
     feat_inputs = np.array(feat_inputs_dense)
 
+    print()
+    print("Features: ")
+    print("Sparse: %d" % sys.getsizeof(feat_inputs_sparse))
+    print("Dense: %d" % sys.getsizeof(feat_inputs_dense))
+    print("np.array: %d" % sys.getsizeof(feat_inputs))
+
     comb_inputs_sparse = comb_vect.fit_transform(samples)
     comb_inputs_dense = comb_inputs_sparse.todense()
     comb_inputs = np.array(comb_inputs_dense)
+
+    print()
+    print("Combined: ")
+    print("Sparse: %d" % sys.getsizeof(comb_inputs_sparse))
+    print("Dense: %d" % sys.getsizeof(comb_inputs_dense))
+    print("np.array: %d" % sys.getsizeof(comb_inputs))
 
     return perm_inputs, feat_inputs, comb_inputs, labels
 
@@ -330,11 +361,12 @@ def save_results(data, modelName):
     month = str( '%02d' % d.month)
     day = str('%02d' % d.day)
     hour = str('%02d' % d.hour)
+    year = str('%02d' % d.year)
     min = str('%02d' % d.minute)
 
     df = pd.DataFrame(data)
     try:
-        path1 = '/home/hduser/DeepLearningResearch/Results/deepResults/multi_input/final_test/' + modelName + month + day + '-' + hour + ':' + min + '.csv'
+        path1 = '/home/grant309/DeepLearning/Results/deepResults/multi_input/fall18/' + modelName + month + day + year + '-' + hour + ':' + min + '.csv'
         file1 = open(path1, "w+")
     except:
         path1 = "gridSearch" + modelName + ".csv"
