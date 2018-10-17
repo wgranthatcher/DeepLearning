@@ -374,9 +374,9 @@ def save_results(data, modelName, model, save):
     df.to_csv(file1, index=False)
     file1.close()
 
-	if save==True:
-		model.save('/home/grant309/DeepLearning/Models/'+ modelName + month + day + year + '-' + hour + ':' + min + '.h5')
-	
+    if save==True:
+        model.save('/home/grant309/DeepLearning/Models/'+ modelName + month + day + year + '-' + hour + ':' + min + '.h5')
+
     return 0
 
 def calc_accuracy(cm):
@@ -423,7 +423,7 @@ def parse_arguments():
     parser.add_argument("-s", "--splits", help="Number of Splits for SSS", type=int)
     parser.add_argument("-ir", "--input_ratio", help="ratio of layer width between \
      features and permissions layers", type=float, nargs="*")
-	parser.add_argument("--save", help="Saves all models run from final mode")
+    parser.add_argument("--save", help="Saves all models run from final mode")
 
     args = parser.parse_args()
 
@@ -531,12 +531,12 @@ def parse_arguments():
         input_ratio = [.25]
     arguments["input_ratio"] = input_ratio
 
-	if args.save:
+    if args.save:
         save = True
     else:
         save = False
     arguments["save"] = save
-	
+
     return arguments
 
 
