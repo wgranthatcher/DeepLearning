@@ -104,49 +104,48 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
     #models = args["model"]
     size = 32
 
-    model = load_model('/home/grant309/DeepLearning/Models/' + args['model'])
+    model = load_model('/home/grant309/DeepLearning/Models/' + args['load'])
 
     #models = {'oneLayer_comb':oneLayer_comb, 'oneLayer_perm':oneLayer_perm, \
     #'oneLayer_feat':oneLayer_feat, 'dual_simple':dual_simple, 'dual_large':dual_large}
     #models = ('oneLayer_comb', 'oneLayer_feat', 'oneLayer_perm', 'dual_simple', 'dual_large')
 
-        data = []
-        for r in args["train_ratio"]:
-            percent=float(r)/100
-            #stratified shuffle split used for cross validation
-            sss = StratifiedShuffleSplit(n_splits=5, random_state=0, test_size=1-percent)
-            cm = np.zeros([2,2], dtype=np.int64)
-            train_time = 0.0
-            test_time = 0.0
-            ir = 0
-			
-            for train_index, test_index in sss.split(perm_inputs, labels):
-                perm_train, perm_test = perm_inputs[train_index], perm_inputs[test_index]
-                feat_train, feat_test = feat_inputs[train_index], feat_inputs[test_index]
-                comb_train, comb_test = comb_inputs[train_index], comb_inputs[test_index]
-                labels_train, labels_test = labels[train_index], labels[test_index]
+    data = []
+    for r in args["train_ratio"]:
+        percent=float(r)/100
+        #stratified shuffle split used for cross validation
+        sss = StratifiedShuffleSplit(n_splits=5, random_state=0, test_size=1-percent)
+        cm = np.zeros([2,2], dtype=np.int64)
+        train_time = 0.0
+        test_time = 0.0
+        ir = 0
 
+        for train_index, test_index in sss.split(perm_inputs, labels):
+            perm_train, perm_test = perm_inputs[train_index], perm_inputs[test_index]
+            feat_train, feat_test = feat_inputs[train_index], feat_inputs[test_index]
+            comb_train, comb_test = comb_inputs[train_index], comb_inputs[test_index]
+            labels_train, labels_test = labels[train_index], labels[test_index]
 
-                time1 = timeit.default_timer()
-                labels_pred = model.predict(comb_test, batch_size=batch)
-                time2 = timeit.default_timer()
-                print time2-time1
-					
-                test_time += time2-time1
-                labels_pred = (labels_pred > 0.5)
-                cm = cm + confusion_matrix(labels_test, labels_pred)
-				
-            acc = calc_accuracy(cm)
-            prec = calc_precision(cm)
-            rec = calc_recall(cm)
-            f1 = calc_f1(prec, rec)
-            avg_train_time = train_time/5
-            avg_test_time = test_time/5
+            time1 = timeit.default_timer()
+            labels_pred = model.predict(comb_test, batch_size=batch)
+            time2 = timeit.default_timer()
+            print time2-time1
 
-            data.append(dict(zip(["model_name", "neurons", "train_ratio", "input_ratio", \
-            "epochs", "batch_size", "accuracy", "precision", "recall", "f1_score", \
-            "avg_train_time", "avg_test_time"], \
-            [m, size, r, ir, epoch, batch, acc, prec, rec, f1, avg_train_time, avg_test_time])))
+            test_time += time2-time1
+            labels_pred = (labels_pred > 0.5)
+            cm = cm + confusion_matrix(labels_test, labels_pred)
+
+        acc = calc_accuracy(cm)
+        prec = calc_precision(cm)
+        rec = calc_recall(cm)
+        f1 = calc_f1(prec, rec)
+        avg_train_time = train_time/5
+        avg_test_time = test_time/5
+
+        data.append(dict(zip(["model_name", "neurons", "train_ratio", "input_ratio", \
+        "epochs", "batch_size", "accuracy", "precision", "recall", "f1_score", \
+        "avg_train_time", "avg_test_time"], \
+        [m, size, r, ir, epoch, batch, acc, prec, rec, f1, avg_train_time, avg_test_time])))
 
 
         print 'saving results for model: ' + str(m)
@@ -237,9 +236,9 @@ def parse_arguments():
         print("Needs Malware Path with -mp or --mal_path")
         sys.exit()
 
-    if args.load_path:
-        load_path = args.load_path
-        arguments["load_path"] = load_path
+    if args.load:
+        load = args.load
+        arguments["load"] = load
     else:
         print("Needs Model File with --load")
         sys.exit()
