@@ -126,6 +126,7 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
             comb_train, comb_test = comb_inputs[train_index], comb_inputs[test_index]
             labels_train, labels_test = labels[train_index], labels[test_index]
 
+            batch = 32
             time1 = timeit.default_timer()
             labels_pred = model.predict(comb_test, batch_size=batch)
             time2 = timeit.default_timer()
