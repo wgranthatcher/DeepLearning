@@ -232,7 +232,7 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
 
 
         print 'saving results for model: ' + str(m)
-        save_results(data, m)
+        save_results(data, m, model, args["save"])
 
 def grid_search(args, perm_inputs, feat_inputs, comb_inputs, labels):
     '''
@@ -353,10 +353,10 @@ def grid_search(args, perm_inputs, feat_inputs, comb_inputs, labels):
 
 
         print 'saving results for model: ' + str(m)
-        save_results(data, m)
+        save_results(data, m, model, False)
     return
 
-def save_results(data, modelName):
+def save_results(data, modelName, model, save):
     d = datetime.datetime.today()
     month = str( '%02d' % d.month)
     day = str('%02d' % d.day)
@@ -374,6 +374,9 @@ def save_results(data, modelName):
     df.to_csv(file1, index=False)
     file1.close()
 
+	if save==True:
+		model.save('/home/grant309/DeepLearning/Models/'+ modelName + month + day + year + '-' + hour + ':' + min + '.h5')
+	
     return 0
 
 def calc_accuracy(cm):
@@ -401,7 +404,7 @@ def parse_arguments():
     parser.add_argument("-gp", "--good_path", help="Good File Path")
     parser.add_argument("-mp", "--mal_path", help="Malware File Path")
     parser.add_argument("-ad", "--adverse", help="Turns on Adversarial Learning")
-    parser.add_argument("-m", "--mode", help="Choose mode: full, grid")
+    parser.add_argument("-m", "--mode", help="Choose mode: final, grid")
     parser.add_argument("-e", "--epochs", help="Number of Epochs, can be list for grid search", type=int, nargs="*")
     parser.add_argument("-tr", "--train_ratio", nargs="*", type=int,
                         help="Set Test Ratios. Enter as a percent (20,40,60,80). Can be a list space delimited")
@@ -420,6 +423,7 @@ def parse_arguments():
     parser.add_argument("-s", "--splits", help="Number of Splits for SSS", type=int)
     parser.add_argument("-ir", "--input_ratio", help="ratio of layer width between \
      features and permissions layers", type=float, nargs="*")
+	parser.add_argument("--save", help="Saves all models run from final mode")
 
     args = parser.parse_args()
 
@@ -527,6 +531,12 @@ def parse_arguments():
         input_ratio = [.25]
     arguments["input_ratio"] = input_ratio
 
+	if args.save:
+        save = True
+    else:
+        save = False
+    arguments["save"] = save
+	
     return arguments
 
 
