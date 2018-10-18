@@ -366,7 +366,7 @@ def save_results(data, modelName, model, save):
 
     df = pd.DataFrame(data)
     try:
-        path1 = '/home/grant309/DeepLearning/Results/deepResults/multi_input/fall18/' + modelName + month + day + year + '-' + hour + ':' + min + '.csv'
+        path1 = '/home/grant309/DeepLearning/Results/deepResults/multi_input/fall18/' + modelName + month + day + year + '-' + hour + min + '.csv'
         file1 = open(path1, "w+")
     except:
         path1 = "gridSearch" + modelName + ".csv"
@@ -375,7 +375,7 @@ def save_results(data, modelName, model, save):
     file1.close()
 
     if save==True:
-        model.save('/home/grant309/DeepLearning/Models/'+ modelName + month + day + year + '-' + hour + ':' + min + '.h5')
+        model.save('/home/grant309/DeepLearning/Models/'+ modelName + month + day + year + '-' + hour + min + '.h5')
 
     return 0
 
