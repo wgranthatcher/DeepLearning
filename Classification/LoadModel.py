@@ -103,11 +103,11 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
     input_ratios = args["input_ratio"]
     
     m = args["model"]
-    
+    print(m)
     size = 32
 
     model = load_model('/home/grant309/DeepLearning/Models/' + args['load'])
-
+    print(model)
     #models = {'oneLayer_comb':oneLayer_comb, 'oneLayer_perm':oneLayer_perm, \
     #'oneLayer_feat':oneLayer_feat, 'dual_simple':dual_simple, 'dual_large':dual_large}
     #models = ('oneLayer_comb', 'oneLayer_feat', 'oneLayer_perm', 'dual_simple', 'dual_large')
@@ -124,7 +124,6 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
         time1 = timeit.default_timer()
         time2 = timeit.default_timer()
         labels_pred = 0
-
         for train_index, test_index in sss.split(perm_inputs, labels):
             perm_train, perm_test = perm_inputs[train_index], perm_inputs[test_index]
             feat_train, feat_test = feat_inputs[train_index], feat_inputs[test_index]
@@ -138,6 +137,7 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
                 time1 = timeit.default_timer()
                 labels_pred = model.predict(comb_test, batch_size=batch)
                 time2 = timeit.default_timer()
+                print labels_pred
 
             elif m == "oneLayer_perm":
                 print 'oneLayer_perm'
@@ -147,6 +147,7 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
                 labels_pred = model.predict(perm_test, batch_size=batch)
                 time2 = timeit.default_timer()
                 print time2-time1
+                print labels_pred
 
             elif m == "oneLayer_feat":
                 print 'oneLayer_feat'
@@ -155,6 +156,7 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
                 time1 = timeit.default_timer()
                 labels_pred = model.predict(feat_test, batch_size = batch)
                 time2 = timeit.default_timer()
+                print labels_pred
 
             elif m == "dual_simple":
                 print 'dual_simple'
@@ -167,6 +169,7 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
                 time1 = timeit.default_timer()
                 labels_pred = model.predict([perm_test, feat_test], batch_size=batch)
                 time2 = timeit.default_timer()
+                print labels_pred
 
             elif m == "dual_large":
                 print 'dual_large'
@@ -176,11 +179,17 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
                 time1 = timeit.default_timer()
                 labels_pred = model.predict([perm_test, feat_test], batch_size=batch)
                 time2 = timeit.default_timer()
+                print labels_pred
 
+            print("labels: ")
+            print(labels_train)
+            print(labels_test)
             test_time += time2-time1
+            print(labels_pred)
             labels_pred = (labels_pred > 0.5)
             cm = cm + confusion_matrix(labels_test, labels_pred)
-            print("cm: " + cm)
+            print("cm: ")
+            print(cm)
 
         acc = calc_accuracy(cm)
         prec = calc_precision(cm)
