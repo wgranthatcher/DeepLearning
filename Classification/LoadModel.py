@@ -178,7 +178,7 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
                     time2 = timeit.default_timer()
 
 
-                train_time += time1-time0
+                #train_time += time1-time0
                 test_time += time2-time1
                 labels_pred = (labels_pred > 0.5)
                 cm = cm + confusion_matrix(labels_test, labels_pred)
