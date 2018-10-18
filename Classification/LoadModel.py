@@ -128,51 +128,51 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
             comb_train, comb_test = comb_inputs[train_index], comb_inputs[test_index]
             labels_train, labels_test = labels[train_index], labels[test_index]
 
-	        if m == "oneLayer_comb":
-                    print 'oneLayer_comb'
-                    epoch = 32
-                    batch = 32
-                    time1 = timeit.default_timer()
-                    labels_pred = model.predict(comb_test, batch_size=batch)
-                    time2 = timeit.default_timer()
+        if m == "oneLayer_comb":
+            print 'oneLayer_comb'
+            epoch = 32
+            batch = 32
+            time1 = timeit.default_timer()
+            labels_pred = model.predict(comb_test, batch_size=batch)
+            time2 = timeit.default_timer()
 
-                elif m == "oneLayer_perm":
-                    print 'oneLayer_perm'
-                    batch = 32
-                    epoch = 16
-                    time1 = timeit.default_timer()
-                    labels_pred = model.predict(perm_test, batch_size=batch)
-                    time2 = timeit.default_timer()
-                    print time2-time1
+        elif m == "oneLayer_perm":
+            print 'oneLayer_perm'
+            batch = 32
+            epoch = 16
+            time1 = timeit.default_timer()
+            labels_pred = model.predict(perm_test, batch_size=batch)
+            time2 = timeit.default_timer()
+            print time2-time1
 
-                elif m == "oneLayer_feat":
-                    print 'oneLayer_feat'
-                    batch = 16
-                    epoch = 32
-                    time1 = timeit.default_timer()
-                    labels_pred = model.predict(feat_test, batch_size = batch)
-                    time2 = timeit.default_timer()
+        elif m == "oneLayer_feat":
+            print 'oneLayer_feat'
+            batch = 16
+            epoch = 32
+            time1 = timeit.default_timer()
+            labels_pred = model.predict(feat_test, batch_size = batch)
+            time2 = timeit.default_timer()
 
-                elif m == "dual_simple":
-                    print 'dual_simple'
-                    batch = 16
-                    epoch = 32
-                    ir = .125
-                    print("args: batch=%i, epochs=%i, ir=%f, perm_width=%i, feat_width=%i" % (batch, epoch, ir, perm_width, feat_width))
-                    print type(perm_width)
-                    print type(feat_width)
-                    time1 = timeit.default_timer()
-                    labels_pred = model.predict([perm_test, feat_test], batch_size=batch)
-                    time2 = timeit.default_timer()
+        elif m == "dual_simple":
+            print 'dual_simple'
+            batch = 16
+            epoch = 32
+            ir = .125
+            print("args: batch=%i, epochs=%i, ir=%f, perm_width=%i, feat_width=%i" % (batch, epoch, ir, perm_width, feat_width))
+            print type(perm_width)
+            print type(feat_width)
+            time1 = timeit.default_timer()
+            labels_pred = model.predict([perm_test, feat_test], batch_size=batch)
+            time2 = timeit.default_timer()
 
-                elif m == "dual_large":
-                    print 'dual_large'
-                    batch = 128
-                    epoch = 32
-                    ir = .125
-                    time1 = timeit.default_timer()
-                    labels_pred = model.predict([perm_test, feat_test], batch_size=batch)
-                    time2 = timeit.default_timer()
+        elif m == "dual_large":
+            print 'dual_large'
+            batch = 128
+            epoch = 32
+            ir = .125
+            time1 = timeit.default_timer()
+            labels_pred = model.predict([perm_test, feat_test], batch_size=batch)
+            time2 = timeit.default_timer()
 
             test_time += time2-time1
             labels_pred = (labels_pred > 0.5)
@@ -256,7 +256,7 @@ def parse_arguments():
                         help="Weight Constraint. Can be a list space delimited")
     parser.add_argument("-d", "--dropout", nargs="*", type=int,
                         help="Dropout. Enter as percent (10,20,30,40...). Can be a list space delimited.")
-    parser.add_argument("-model", "--model", help="Select which model to run: oneLayer_perm, \ 
+    parser.add_argument("-model", "--model", help="Select which model to run: oneLayer_perm, \
      oneLayer_feat, oneLayer_comb, dual_large, or dual_simple")
     parser.add_argument("-s", "--splits", help="Number of Splits for SSS", type=int)
     parser.add_argument("-ir", "--input_ratio", help="ratio of layer width between \
