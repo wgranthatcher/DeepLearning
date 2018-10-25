@@ -3,16 +3,17 @@ import timeit
 import pandas as pd
 import datetime
 import argparse
+import sys
 
 from functools import partial
 from nltk.tokenize.regexp import regexp_tokenize
 from sklearn.model_selection import StratifiedShuffleSplit, cross_validate, GridSearchCV, StratifiedKFold
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import confusion_matrix
-from .keras_models import create_one_layer, create_dualInputSimple, create_dualInputLarge
+from keras_models import create_one_layer, create_dualInputSimple, create_dualInputLarge
 
 from keras.wrappers.scikit_learn import KerasClassifier
-from keras.layers import Merge, Dense, Dropout, Input, concatenate
+from keras.layers import merge, Dense, Dropout, Input, concatenate
 from keras.models import Model
 from keras.models import Sequential
 from keras.constraints import maxnorm
@@ -47,6 +48,11 @@ def vectorize(good_path, mal_path):
     with open(mal_path) as f:
         mal_samples = f.readlines()
 
+    print("Benign Size: ")
+    print(sys.getsizeof(ben_samples))
+    print("Malware Size: ")
+    print(sys.getsizeof(mal_samples))
+
     samples = ben_samples + mal_samples
 
     labels = np.array([])
@@ -54,6 +60,9 @@ def vectorize(good_path, mal_path):
         labels = np.append(labels, 0)
     for x in mal_samples:
         labels = np.append(labels, 1)
+
+    print("Samples: ")
+    print(sys.getsizeof(samples))
 
     #regular expressions for each desired data type
     perm_pattern = "(?:\w|\.)+(?:permission).(?:\w|\.)+"
@@ -64,19 +73,41 @@ def vectorize(good_path, mal_path):
     feat_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=feat_pattern))
     comb_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=comb_pattern))
 
+    print("Perm Vect: ")
+    print(sys.getsizeof(perm_vect))
+    print(sys.getsizeof(feat_vect))
+    print(sys.getsizeof(comb_vect))
+
     time0 = timeit.default_timer()
     #each vectorizer tokenizes via fit_transform() and then is converted to a dense vector
     perm_inputs_sparse = perm_vect.fit_transform(samples)
     perm_inputs_dense = perm_inputs_sparse.todense()
     perm_inputs = np.array(perm_inputs_dense)
 
+    print("Permissions: ")
+    print("Sparse: %d" % sys.getsizeof(perm_inputs_sparse))
+    print("Dense: %d" % sys.getsizeof(perm_inputs_dense))
+    print("np.array: %d" % sys.getsizeof(perm_inputs))
+
     feat_inputs_sparse = feat_vect.fit_transform(samples)
     feat_inputs_dense = feat_inputs_sparse.todense()
     feat_inputs = np.array(feat_inputs_dense)
 
+    print()
+    print("Features: ")
+    print("Sparse: %d" % sys.getsizeof(feat_inputs_sparse))
+    print("Dense: %d" % sys.getsizeof(feat_inputs_dense))
+    print("np.array: %d" % sys.getsizeof(feat_inputs))
+
     comb_inputs_sparse = comb_vect.fit_transform(samples)
     comb_inputs_dense = comb_inputs_sparse.todense()
     comb_inputs = np.array(comb_inputs_dense)
+
+    print()
+    print("Combined: ")
+    print("Sparse: %d" % sys.getsizeof(comb_inputs_sparse))
+    print("Dense: %d" % sys.getsizeof(comb_inputs_dense))
+    print("np.array: %d" % sys.getsizeof(comb_inputs))
 
     return perm_inputs, feat_inputs, comb_inputs, labels
 
@@ -89,6 +120,8 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
     feat_width = int(len(feat_inputs[0]))
     comb_width = int(len(comb_inputs[0]))
     print 'perm width: ' + str(perm_width)
+    print 'feat width: ' + str(feat_width)
+    print 'comb width: ' + str(comb_width)
     input_ratios = args["input_ratio"]
     models = args["model"]
     size = 32
@@ -201,7 +234,7 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
 
 
         print 'saving results for model: ' + str(m)
-        save_results(data, m)
+        save_results(data, m, model, args["save"])
 
 def grid_search(args, perm_inputs, feat_inputs, comb_inputs, labels):
     '''
@@ -322,25 +355,29 @@ def grid_search(args, perm_inputs, feat_inputs, comb_inputs, labels):
 
 
         print 'saving results for model: ' + str(m)
-        save_results(data, m)
+        save_results(data, m, model, False)
     return
 
-def save_results(data, modelName):
+def save_results(data, modelName, model, save):
     d = datetime.datetime.today()
     month = str( '%02d' % d.month)
     day = str('%02d' % d.day)
     hour = str('%02d' % d.hour)
+    year = str('%02d' % d.year)
     min = str('%02d' % d.minute)
 
     df = pd.DataFrame(data)
     try:
-        path1 = '/home/hduser/DeepLearningResearch/Results/deepResults/multi_input/final_test/' + modelName + month + day + '-' + hour + ':' + min + '.csv'
+        path1 = '/home/hduser/DeepLearning/DeepLearning/Results/deepResults/multi_input/fall18/' + modelName + month + day + year + '-' + hour + min + '.csv'
         file1 = open(path1, "w+")
     except:
         path1 = "gridSearch" + modelName + ".csv"
         file1 = open(path1, "w+")
     df.to_csv(file1, index=False)
     file1.close()
+
+    if save==True:
+        model.save('/home/hduser/DeepLearning/DeepLearning/Models/'+ modelName + month + day + year + '-' + hour + min + '.h5')
 
     return 0
 
@@ -369,7 +406,7 @@ def parse_arguments():
     parser.add_argument("-gp", "--good_path", help="Good File Path")
     parser.add_argument("-mp", "--mal_path", help="Malware File Path")
     parser.add_argument("-ad", "--adverse", help="Turns on Adversarial Learning")
-    parser.add_argument("-m", "--mode", help="Choose mode: full, grid")
+    parser.add_argument("-m", "--mode", help="Choose mode: final, grid")
     parser.add_argument("-e", "--epochs", help="Number of Epochs, can be list for grid search", type=int, nargs="*")
     parser.add_argument("-tr", "--train_ratio", nargs="*", type=int,
                         help="Set Test Ratios. Enter as a percent (20,40,60,80). Can be a list space delimited")
@@ -388,6 +425,7 @@ def parse_arguments():
     parser.add_argument("-s", "--splits", help="Number of Splits for SSS", type=int)
     parser.add_argument("-ir", "--input_ratio", help="ratio of layer width between \
      features and permissions layers", type=float, nargs="*")
+    parser.add_argument("--save", help="Saves all models run from final mode")
 
     args = parser.parse_args()
 
@@ -495,8 +533,15 @@ def parse_arguments():
         input_ratio = [.25]
     arguments["input_ratio"] = input_ratio
 
+    if args.save:
+        save = True
+    else:
+        save = False
+    arguments["save"] = save
+
     return arguments
 
 
 if __name__ == "__main__":
     main()
+

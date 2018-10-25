@@ -1,0 +1,724 @@
+    1  ls
+    2  cd ..
+    3  exit
+    4  ls
+    5  exit
+    6  ls
+    7  exit
+    8  ls
+    9  cd DeepLearningResearch/
+   10  cd Demo/
+   11  python classify_demo_m.py
+   12  exit
+   13  ls
+   14  cd ..
+   15  ls
+   16  cd grant309/
+   17  ls
+   18  exit
+   19  ls
+   20  exit
+   21  ls
+   22  exit
+   23  ls
+   24  exit
+   25  ls
+   26  exit
+   27  ls
+   28  exit
+   29  ls
+   30  cd tensorflow/
+   31  ls
+   32  cd ..
+   33  ls
+   34  cd DeepLearningResearch/
+   35  ls
+   36  cd Classification/
+   37  ls
+   38  cd ..
+   39  ls
+   40  cd feat
+   41  cd FeatureExtraction/
+   42  ls
+   43  cd ..
+   44  ls
+   45  cd Classification/
+   46  l
+   47  ls
+   48  nano commandToRun.txt
+   49  ld
+   50  ls
+   51  nano KTF_dual_input.py
+   52  exit
+   53  ls
+   54  Pay Period Begin Date: 09/15/2018
+   55  Title: Grant #5040171
+   56  STD Hours: 20.00
+   57  FTE:  0.50
+   58  Pay Period End Date: 09/28/2018Pay Period Begin Date: 09/15/2018
+   59  Title: Grant #5040171
+   60  STD Hours: 20.00
+   61  FTE:  0.50
+   62  ls
+   63  cd tensorflow/
+   64  ls
+   65  cd tensorflow/
+   66  ls
+   67  cd ..
+   68  ls
+   69  cd d
+   70  cd DeepLearningResearch/
+   71  ls
+   72  cd Classification/
+   73  ls
+   74  nano KTFBinClass.py
+   75  ls
+   76  ftp -h
+   77  exit
+   78  python -V
+   79  ls
+   80  git clone https://github.com/wgranthatcher/DeepLearning.git
+   81  ls
+   82  cd DeepLearning
+   83  ls
+   84  cd ..
+   85  ls
+   86  cd DeepLearningResearch/
+   87  ls
+   88  cd ..
+   89  ls
+   90  cd DeepLearning
+   91  ls
+   92  cd ..
+   93  ls
+   94  cd DeepLearning
+   95  ls
+   96  git checkout -- add-3-models
+   97  git pull
+   98  ls
+   99  git pull
+  100  ls
+  101  git pull
+  102  ls
+  103  git checkout -b add-3-models
+  104  ls
+  105  git pull
+  106  ls
+  107  git pull add-3-models
+  108  git checkout add-3-models
+  109  ls
+  110  git pull
+  111  git fetch --all
+  112  ls
+  113  git checkout add-3-models
+  114  ls
+  115  git pull
+  116  git pull <remote> add-3-models
+  117  git pull https://github.com/wgranthatcher/DeepLearning.git add-3-models
+  118  ls
+  119  nano To\ Do.txt 
+  120  ls
+  121  cd ..
+  122  mkdir AmazonCustReviews
+  123  ls
+  124  cd AmazonCustReviews/
+  125  LS
+  126  ls
+  127  wget "https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Wireless_v1_00.tsv.gz"
+  128  ls
+  129  nano amazon_reviews_us_Wireless_v1_00.tsv.gz 
+  130  gz -help
+  131  gzip -help
+  132  gzip amazon_reviews_us_Wireless_v1_00.tsv.gz 
+  133  gzip -c amazon_reviews_us_Wireless_v1_00.tsv.gz 
+  134  ls
+  135  cd /etc/
+  136  ls
+  137  nano vsftpd.conf 
+  138  sudo nano vsftpd.conf 
+  139  cd. /home/
+  140  cd ..
+  141  ls
+  142  cd home/
+  143  ls
+  144  cd grant309/
+  145  ls
+  146  exit
+  147  sudo service vsftpd restart
+  148  ls
+  149  exit
+  150  ls
+  151  vsftpd log
+  152  ls
+  153  ftpd -h
+  154  ftp -h
+  155  sudo apt-get vsftpd
+  156  ls
+  157  sudo apt-get install vsftpd
+  158  systemctl start vsftpd
+  159  ls
+  160  systemctl start vsftpd
+  161  ls
+  162  vsftpd -h
+  163  vsftpd -help
+  164  vsftpd --h
+  165  ls
+  166  cd AmazonCustReviews/
+  167  ls
+  168  cat
+  169  hist
+  170  gzip -d amazon_reviews_us_Wireless_v1_00.tsv.gz 
+  171  ls
+  172  nano amazon_reviews_us_Wireless_v1_00.tsv 
+  173  ls
+  174  cd ..
+  175  ls
+  176  rm amazon_reviews_us_Wireless_v1_00.tsv 
+  177  ls
+  178  cd AmazonCustReviews/
+  179  ls
+  180  AmazonCustReviews/
+  181  cd AmazonCustReviews/
+  182  ls
+  183  wget -i download.txt 
+  184  ls
+  185  gzip -d *
+  186  ls
+  187  cd ..
+  188  ls
+  189  cd DeepLearning
+  190  ls
+  191  git pull
+  192  git pull https://github.com/wgranthatcher/DeepLearning.git add-3-models
+  193  ls
+  194  cd Classification/
+  195  ls
+  196  nano keras_models.py
+  197  cd ..
+  198  ls
+  199  cd python Classification.KTFBinClass.py --good_path Data\benign_badging_full_v2.txt --mal_path Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  200  cd python Classification.KTFBinClass.py --good_path ~\Data\benign_badging_full_v2.txt --mal_path ~\Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  201  python Classification.KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  202  cd Classification/
+  203  ls
+  204  python KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  205  python -m compileall
+  206  python KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  207  nano keras_models.py
+  208  python -m compileall
+  209  python
+  210  python KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  211  nano
+  212  nano keras_models.py
+  213  nanon KTFBinClass.py
+  214  nano KTFBinClass.py
+  215  python KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  216  nano KTFBinClass.py
+  217  nano keras_models.py
+  218  python KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  219  nano keras_models.py
+  220  nano KTFBinClass.py
+  221  python KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  222  ls
+  223  cd ..
+  224  ls
+  225  cd Classification/
+  226  ls
+  227  python Classification.KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  228  cd ..
+  229  ls
+  230  python Classification.KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model thouLayer
+  231  cd Classification/
+  232  ls
+  233  cd DeepLearningResearch/
+  234  ls
+  235  python Classification.KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  236  python KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  237  cd Classification/
+  238  python KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  239  python DeepLearningResearch.Classification.KTFBinClass.py --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  240  pip list
+  241  pip install matplotlib
+  242  pip list
+  243  python -m pip install matplotlib
+  244  ls
+  245  cd ..
+  246  ls
+  247  cd ..
+  248  ls
+  249  cd DeepLearning
+  250  cd ..
+  251  ls
+  252  cd DeepLearningResearch/
+  253  ls
+  254  python DeepLearningResearch.Classification.KTFBinClass --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  255  python -m DeepLearningResearch.Classification.KTFBinClass --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  256  python -m Classification.KTFBinClass --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  257  ls
+  258  cd Classification/
+  259  ls
+  260  nano KTFBinClass.py
+  261  nano keras_models.py
+  262  python -m Classification.KTFBinClass --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  263  cd ..
+  264  python -m Classification.KTFBinClass --good_path \Data\benign_badging_full_v2.txt --mal_path \Data\mal_badging_full_v2.txt  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  265  cd Classification/
+  266  ls
+  267  nano keras_models.py
+  268  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  269  cd ..
+  270  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  271  cd ..'
+  272  x
+  273  .
+  274  .
+  275  s
+  276  ls
+  277  cd ..
+  278  cd DeepLearning
+  279  ls
+  280  cd Classification/
+  281  ls
+  282  nano KTF_dual_input.py
+  283  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  284  cd ..
+  285  cd DeepLearning
+  286  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  287  cd Classification/
+  288  ls
+  289  nano keras_models.py
+  290  cd ..
+  291  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --test_ratio 20 --batch_size 500 --model oneLayer
+  292  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --tr 20 --batch_size 500 --model oneLayer
+  293  cd ..
+  294  ls
+  295  cd ..
+  296  ls
+  297  cd grant309/
+  298  ls
+  299  cd DeepLearning
+  300  ls
+  301  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --tr 20 --batch_size 500 --model oneLayer
+  302  ls
+  303  cd ..
+  304  ls
+  305  cd DeepLearning
+  306  ls
+  307  cd Results/
+  308  ls
+  309  cd Deep
+  310  cd deepResults/
+  311  ls
+  312  date
+  313  cd tensorFlow/
+  314  ls
+  315  cd ..
+  316  ls
+  317  cd multi_input/
+  318  ls
+  319  cd final_test/
+  320  ls
+  321  cd ..
+  322  ls
+  323  cd ..
+  324  ls
+  325  cd grant309/
+  326  LS
+  327  ls
+  328  cd DeepLearning
+  329  ls
+  330  cd Data/
+  331  ls
+  332  cd ..
+  333  cd Results/
+  334  ls
+  335  cd deepResults/
+  336  ls
+  337  cd multi_input/
+  338  cd final_test/
+  339  ls
+  340  cd ..
+  341  ls
+  342  cd ..
+  343  ls
+  344  cd ..
+  345  ls
+  346  cd tensorflow/
+  347  ls
+  348  cd tensorflow/
+  349  ls
+  350  cd ci
+  351  cd co
+  352  cd core
+  353  ls
+  354  cd grappler/
+  355  ls
+  356  cd optimizers/
+  357  ls
+  358  cd ..
+  359  ls
+  360  cd ..
+  361  ls
+  362  cd ..
+  363  ls
+  364  cd ..
+  365  ls
+  366  cd tensorflow/
+  367  ls
+  368  cd third_party/
+  369  ls
+  370  cd ..
+  371  ls
+  372  cd tensorflow/
+  373  ls
+  374  cd core
+  375  ls
+  376  cd common_runtime/
+  377  ls
+  378  cd..
+  379  ls
+  380  cd ..
+  381  ls
+  382  cd kernels/
+  383  ls
+  384  cd  ..
+  385  cd ..
+  386  cd DeepLearning
+  387  ls
+  388  cd Classification/
+  389  nano KTFBinClass.py
+  390  git pull
+  391  cd ..
+  392  git pull
+  393  git pull https://github.com/wgranthatcher/DeepLearning add-3-models
+  394  ls
+  395  git fetch origin
+  396  ls
+  397  nano to
+  398  nano To\ Do.txt 
+  399  git reset --hard origin/add-3-models
+  400  ls
+  401  git pull
+  402  git pull https://github.com/wgranthatcher/DeepLearning add-3-models
+  403  ls
+  404  nano To\ Do.txt 
+  405  python -m Classification.KTFBinClass --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --tr 20 --batch_size 500 --model oneLayer
+  406  cd ..
+  407  cd DeepLearning
+  408  cd Classification/
+  409  nano KTFBinClass.py
+  410  cd ..
+  411  python -m Classification.KTFBinClass1 --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --tr 20 --batch_size 500 --model oneLayer
+  412  python -m Classification.KTFBinClass --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode full --epochs 8 --tr 20 --batch_size 500 --model oneLayer
+  413  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 10000 --model oneLayer
+  414  ls
+  415  cd DeepLearning
+  416  ls
+  417  cd Results/
+  418  ls
+  419  cd deepResults/
+  420  ls
+  421  cd multi
+  422  cd multi_input/
+  423  ls
+  424  cd Fi
+  425  cd final_test/
+  426  ls
+  427  cd ..
+  428  ls
+  429  cd ..
+  430  ls
+  431  cd ..
+  432  ls
+  433  cd ..
+  434  ls
+  435  cd Classification/
+  436  nano KTF_dual_input.py
+  437  cd ..
+  438  ls
+  439  cd Results/
+  440  ls
+  441  cd deepResults/
+  442  ls
+  443  cd multi_input/
+  444  ls
+  445  mkdir fall18
+  446  ls
+  447  cd ..
+  448  cd Classification/
+  449  ls
+  450  nano KTF_dual_input.py
+  451  ls
+  452  cd DeepLearning
+  453  ls
+  454  cd Classification/
+  455  ls
+  456  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  457  cd ..
+  458  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  459  cd Classification/
+  460  ls
+  461  nano KTF_dual_input.py
+  462  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  463  cd ..
+  464  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  465  ls
+  466  cd DeepLearning
+  467  ls
+  468  cd Results/
+  469  cd mu
+  470  ls
+  471  cd deepResults/
+  472  cd multi_input/
+  473  cd final_test/
+  474  ls
+  475  ;ls
+  476  ls
+  477  cd DeepLearning
+  478  cd Results/
+  479  cd deepResults/
+  480  cd multi_input/
+  481  ls
+  482  cd fall18/
+  483  ls
+  484  cd ..
+  485  ls
+  486  cd f
+  487  cd final_test/
+  488  ls
+  489  cd ..
+  490  ls
+  491  cd ..
+  492  ls
+  493  cd Classification/
+  494  nano KTF_dual_input.py
+  495  cd ..
+  496  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  497  ls
+  498  cd Results/
+  499  cd deepResults/
+  500  cd multi_input/
+  501  cd fall18/
+  502  ls
+  503  cd ..
+  504  ls Data/
+  505  ls-l
+  506  ls -l
+  507  ls
+  508  cd Data/
+  509  ls
+  510  ls -l
+  511  cd ..
+  512  ls
+  513  cd Classification/
+  514  ls
+  515  nano KTF_dual_input.py
+  516  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  517  python -m KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  518  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  519  cd ..
+  520  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  521  cd Classification/
+  522  ls
+  523  nano KTF_dual_input.py
+  524  cd ..
+  525  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  526  cd Classification/
+  527  ls
+  528  nano KTF_dual_input.py
+  529  cd ..
+  530  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  531  cd Classification/
+  532  nano KTF_dual_input.py
+  533  cd ..
+  534  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  535  cd Classification/
+  536  nano KTF_dual_input.py
+  537  cd ..
+  538  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  539  cd ..
+  540  nano KTF_dual_input.py
+  541  cd DeepLearning
+  542  cd Classification/
+  543  ls
+  544  nano KTF_dual_input.py
+  545  cd ..
+  546  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  547  cd Classification/
+  548  nano KTF_dual_input.py
+  549  cd ..
+  550  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  551  tail -n 500 ../Data/mal_badging_full_v2.txt > ../Data/mal_badging_500
+  552  tail -n 500 ../Data/mal_badging_full_v2.txt > ../Data/mal_badging_500.txt
+  553  tail -n 500 Data/mal_badging_full_v2.txt > Data/mal_badging_500.txt
+  554  tail -n 1000 Data/mal_badging_full_v2.txt > Data/mal_badging_1000.txt
+  555  tail -n 500 Data/benign_badging_full_v2.txt > Data/benign_badging_500.txt
+  556  tail -n 1000 Data/benign_badging_full_v2.txt > Data/benign_badging_1000.txt
+  557  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+  558  cd DeepLearning
+  559  ls
+  560  cd Data/
+  561  ls
+  562  ls -l 
+  563  ls -l --block-size=M
+  564  ls
+  565  cd DeepLearning
+  566  ls
+  567  cd Models/
+  568  ls
+  569  ls -l
+  570  cd ..
+  571  ls
+  572  cd DeepLearning
+  573  ls
+  574  cd Cl
+  575  cd Classification/
+  576  ls
+  577  nano KTF_dual_input.py
+  578  cd ..
+  579  ls
+  580  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer --save
+  581  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer --save True
+  582  ls
+  583  cd Models/
+  584  ls
+  585  ls -l
+  586  cd ..
+  587  ls
+  588  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5"
+  589  ls
+  590  git add *
+  591  git commit -m "Remove : from file names"
+  592  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+  593  ls
+  594  git pull https://github.com/wgranthatcher/DeepLearning add-3-models
+  595  ls
+  596  cd Classification/
+  597  ls
+  598  nano LoadModel.py 
+  599  python -m LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  600  nano LoadModel.py 
+  601  python -m LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  602  nano LoadModel.py 
+  603  python -m LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  604  cd ..
+  605  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  606  ls
+  607  head -n 1000 Data/mal_badging_full_v2.txt > Data/mal_badging_1000h.txt
+  608  head -n 1000 Data/benign_badging_full_v2.txt > Data/benign_badging_1000h.txt
+  609  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  610  ls
+  611  git add *
+  612  git commit -m "Updated tabs"
+  613  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+  614  ls
+  615  cd Classification/
+  616  nano LoadModel.py 
+  617  cd ..
+  618  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  619  cd Classification/
+  620  nano LoadModel.py 
+  621  cd ..
+  622  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  623  cd Classification/
+  624  nano LoadModel.py 
+  625  cd ..
+  626  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  627  cd Classification/
+  628  nano LoadModel.py 
+  629  cd ..
+  630  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  631  cd Classification/
+  632  nano LoadModel.py 
+  633  cd ..
+  634  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  635  cd Classification/
+  636  nano LoadModel.py 
+  637  cd ..
+  638  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  639  cd Classification/
+  640  nano LoadModel.py 
+  641  cd ..
+  642  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  643  cd Classification/
+  644  nano LoadModel.py 
+  645  cd ..
+  646  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  647  cd Classification/
+  648  nano LoadModel.py 
+  649  cd ..
+  650  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  651  ls
+  652  nano LoadModel.py 
+  653  cd ..
+  654  cd DeepLearning
+  655  cd Classification/
+  656  nano KTF_dual_input.py
+  657  cd ..
+  658  git add *
+  659  git commit -m "update"
+  660  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+  661  cd Classification/
+  662  nano LoadModel.py 
+  663  cd ..
+  664  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  665  cd Classification/
+  666  nano LoadModel.py 
+  667  cd ..
+  668  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  669  cd Classification/
+  670  nano LoadModel.py 
+  671  cd ..
+  672  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  673  cd Classification/
+  674  nano LoadModel.py 
+  675  cd ..
+  676  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  677  cd Classification/
+  678  nano LoadModel.py 
+  679  cd ..
+  680  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  681  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model dual_large
+  682  cd Classification/
+  683  nano LoadModel.py 
+  684  cd ..
+  685  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  686  cd Classification/
+  687  nano LoadModel.py 
+  688  cd ..
+  689  ls
+  690  git add *
+  691  git commit -m "update"
+  692  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+  693  ls
+  694  git pull https://github.com/wgranthatcher/DeepLearning add-3-models
+  695  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000h.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000h.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  696  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  697  cd Classification/
+  698  nano LoadModel.py 
+  699  cd ..
+  700  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --epochs 1 --tr 20 --batch_size 20000 --load "dual_large10182018-1502.h5" -model "dual_large"
+  701  ls
+  702  cd Results/
+  703  ls
+  704  cd deepResults/
+  705  ls
+  706  cd multi_input/
+  707  cd final_test/
+  708  cd F
+  709  ls
+  710  cd ..
+  711  ls
+  712  cd fall18/
+  713  ls
+  714  cd loaded/
+  715  ls
+  716  nano dual_large10182018-1644.csv 
+  717  cd ..
+  718  git add *
+  719  ls
+  720  git commit -m "update only tests on original shape"
+  721  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+  722  ls
+  723  git pull https://github.com/wgranthatcher/DeepLearning add-3-models
+  724  history > hist.txt
