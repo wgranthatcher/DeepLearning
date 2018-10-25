@@ -1,0 +1,2 @@
+accuracy,avg_test_time,avg_train_time,batch_size,epochs,f1_score,input_ratio,model_name,neurons,precision,recall,train_ratio
+0.911521323997,7.69858617783,69.23964715,32,16,0.910431218909,0,oneLayer_perm,32,0.904671652495,0.91626459144,20

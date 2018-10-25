@@ -10,7 +10,7 @@ from nltk.tokenize.regexp import regexp_tokenize
 from sklearn.model_selection import StratifiedShuffleSplit, cross_validate, GridSearchCV, StratifiedKFold
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import confusion_matrix
-from .keras_models import create_one_layer, create_dualInputSimple, create_dualInputLarge
+from keras_models import create_one_layer, create_dualInputSimple, create_dualInputLarge
 
 from keras.wrappers.scikit_learn import KerasClassifier
 from keras.layers import merge, Dense, Dropout, Input, concatenate
@@ -120,6 +120,8 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
     feat_width = int(len(feat_inputs[0]))
     comb_width = int(len(comb_inputs[0]))
     print 'perm width: ' + str(perm_width)
+    print 'feat width: ' + str(feat_width)
+    print 'comb width: ' + str(comb_width)
     input_ratios = args["input_ratio"]
     models = args["model"]
     size = 32
@@ -366,7 +368,7 @@ def save_results(data, modelName, model, save):
 
     df = pd.DataFrame(data)
     try:
-        path1 = '/home/grant309/DeepLearning/Results/deepResults/multi_input/fall18/' + modelName + month + day + year + '-' + hour + min + '.csv'
+        path1 = '/home/hduser/DeepLearning/DeepLearning/Results/deepResults/multi_input/fall18/' + modelName + month + day + year + '-' + hour + min + '.csv'
         file1 = open(path1, "w+")
     except:
         path1 = "gridSearch" + modelName + ".csv"
@@ -375,7 +377,7 @@ def save_results(data, modelName, model, save):
     file1.close()
 
     if save==True:
-        model.save('/home/grant309/DeepLearning/Models/'+ modelName + month + day + year + '-' + hour + min + '.h5')
+        model.save('/home/hduser/DeepLearning/DeepLearning/Models/'+ modelName + month + day + year + '-' + hour + min + '.h5')
 
     return 0
 
@@ -542,3 +544,4 @@ def parse_arguments():
 
 if __name__ == "__main__":
     main()
+
