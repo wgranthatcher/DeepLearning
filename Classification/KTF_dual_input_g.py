@@ -123,7 +123,7 @@ def vectorize(good_path, mal_path):
     print()
     print("Comb Vect - Get Params:")
     print(comb_vect.get_params())
-	
+
     #print("Combined Inputs SPARSE:")
     #print(comb_inputs_sparse)
     #print("Combined Inputs DENSE:")
