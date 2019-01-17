@@ -119,13 +119,13 @@ def vectorize(good_path, mal_path):
     print("Sparse: %d" % sys.getsizeof(comb_inputs_sparse))
     print("Dense: %d" % sys.getsizeof(comb_inputs_dense))
     print("np.array: %d" % sys.getsizeof(comb_inputs))
-	
-	print("Combined Inputs SPARSE:")
-	print(comb_inputs_sparse)
-	print("Combined Inputs DENSE:")
-	print(comb_inputs_dense)
-	print("Combined Inputs DENSE ARRAY:")
-	print(comb_inputs)
+
+    print("Combined Inputs SPARSE:")
+    print(comb_inputs_sparse)
+    print("Combined Inputs DENSE:")
+    print(comb_inputs_dense)
+    print("Combined Inputs DENSE ARRAY:")
+    print(comb_inputs)
 
     return perm_inputs, feat_inputs, comb_inputs, labels
 
