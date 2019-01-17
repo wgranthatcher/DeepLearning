@@ -58,7 +58,7 @@ def vectorize(good_path, mal_path):
     samples = ben_samples + mal_samples
 
     print("Samples:")
-    print(samples)
+    print("prints full sample set with apps enclosed by "" .")
 
     labels = np.array([])
     for x in ben_samples:
@@ -67,7 +67,7 @@ def vectorize(good_path, mal_path):
         labels = np.append(labels, 1)
 
     print("Labels:")
-    print(labels)
+    print("prints classification labels o (ben) and 1 (mal).")
 
     print("Samples Size: ")
     print(sys.getsizeof(samples))
@@ -82,12 +82,12 @@ def vectorize(good_path, mal_path):
     comb_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=comb_pattern))
 
     print("Comb Vect:")
-    print(comb_vect)
+    print("prints descriptor of count vectorizer")
 
-    print("Perm Vect: ")
-    print(sys.getsizeof(perm_vect))
-    print(sys.getsizeof(feat_vect))
-    print(sys.getsizeof(comb_vect))
+    #print("Perm Vect: ")
+    #print(sys.getsizeof(perm_vect))
+    #print(sys.getsizeof(feat_vect))
+    #print(sys.getsizeof(comb_vect))
 
     time0 = timeit.default_timer()
     #each vectorizer tokenizes via fit_transform() and then is converted to a dense vector
@@ -95,30 +95,37 @@ def vectorize(good_path, mal_path):
     perm_inputs_dense = perm_inputs_sparse.todense()
     perm_inputs = np.array(perm_inputs_dense)
 
-    print("Permissions: ")
-    print("Sparse: %d" % sys.getsizeof(perm_inputs_sparse))
-    print("Dense: %d" % sys.getsizeof(perm_inputs_dense))
-    print("np.array: %d" % sys.getsizeof(perm_inputs))
+    #print("Permissions: ")
+    #print("Sparse: %d" % sys.getsizeof(perm_inputs_sparse))
+    #print("Dense: %d" % sys.getsizeof(perm_inputs_dense))
+    #print("np.array: %d" % sys.getsizeof(perm_inputs))
 
     feat_inputs_sparse = feat_vect.fit_transform(samples)
     feat_inputs_dense = feat_inputs_sparse.todense()
     feat_inputs = np.array(feat_inputs_dense)
 
-    print()
-    print("Features: ")
-    print("Sparse: %d" % sys.getsizeof(feat_inputs_sparse))
-    print("Dense: %d" % sys.getsizeof(feat_inputs_dense))
-    print("np.array: %d" % sys.getsizeof(feat_inputs))
+    #print()
+    #print("Features: ")
+    #print("Sparse: %d" % sys.getsizeof(feat_inputs_sparse))
+    #print("Dense: %d" % sys.getsizeof(feat_inputs_dense))
+    #print("np.array: %d" % sys.getsizeof(feat_inputs))
 
     comb_inputs_sparse = comb_vect.fit_transform(samples)
     comb_inputs_dense = comb_inputs_sparse.todense()
     comb_inputs = np.array(comb_inputs_dense)
 
     print()
-    print("Combined: ")
+    print("---- Combined ----: ")
     print("Sparse: %d" % sys.getsizeof(comb_inputs_sparse))
     print("Dense: %d" % sys.getsizeof(comb_inputs_dense))
     print("np.array: %d" % sys.getsizeof(comb_inputs))
+	
+	print("Combined Inputs SPARSE:")
+	print(comb_inputs_sparse)
+	print("Combined Inputs DENSE:")
+	print(comb_inputs_dense)
+	print("Combined Inputs DENSE ARRAY:")
+	print(comb_inputs)
 
     return perm_inputs, feat_inputs, comb_inputs, labels
 
