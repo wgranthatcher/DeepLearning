@@ -81,12 +81,6 @@ def vectorize(good_path, mal_path):
     feat_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=feat_pattern))
     comb_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=comb_pattern))
 
-    print("Comb Vect - Vocabulary:")
-    print(comb_vect.vocabulary_)
-    print()
-    print("Comb Vect - Get Params:")
-    print(comb_vect.get_params())
-
     #print("Perm Vect: ")
     #print(sys.getsizeof(perm_vect))
     #print(sys.getsizeof(feat_vect))
@@ -123,12 +117,19 @@ def vectorize(good_path, mal_path):
     print("Dense: %d" % sys.getsizeof(comb_inputs_dense))
     print("np.array: %d" % sys.getsizeof(comb_inputs))
 
-    print("Combined Inputs SPARSE:")
-    print(comb_inputs_sparse)
-    print("Combined Inputs DENSE:")
-    print(comb_inputs_dense)
-    print("Combined Inputs DENSE ARRAY:")
-    print(comb_inputs)
+    print()
+    print("Comb Vect - Vocabulary:")
+    print(comb_vect.vocabulary_)
+    print()
+    print("Comb Vect - Get Params:")
+    print(comb_vect.get_params())
+	
+    #print("Combined Inputs SPARSE:")
+    #print(comb_inputs_sparse)
+    #print("Combined Inputs DENSE:")
+    #print(comb_inputs_dense)
+    #print("Combined Inputs DENSE ARRAY:")
+    #print(comb_inputs)
 
     return perm_inputs, feat_inputs, comb_inputs, labels
 
