@@ -81,8 +81,11 @@ def vectorize(good_path, mal_path):
     feat_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=feat_pattern))
     comb_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=comb_pattern))
 
-    print("Comb Vect:")
-    print("prints descriptor of count vectorizer")
+    print("Comb Vect - Vocabulary:")
+    print(comb_vect.vocabulary_)
+    print()
+    print("Comb Vect - Get Params:")
+    print(comb_vect.get_params())
 
     #print("Perm Vect: ")
     #print(sys.getsizeof(perm_vect))
