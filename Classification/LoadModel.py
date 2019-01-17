@@ -54,6 +54,8 @@ def vectorize(good_path, mal_path):
     print(sys.getsizeof(mal_samples))
 
     samples = ben_samples + mal_samples
+    print("Samples:")
+    print(samples)
 
     labels = np.array([])
     for x in ben_samples:
@@ -61,7 +63,10 @@ def vectorize(good_path, mal_path):
     for x in mal_samples:
         labels = np.append(labels, 1)
 
-    print("Samples: ")
+    print("Labels:")
+    print(labels)
+
+    print("Samples Size: ")
     print(sys.getsizeof(samples))
 
     #regular expressions for each desired data type

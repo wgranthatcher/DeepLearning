@@ -15,7 +15,7 @@ def main():
     args = parse_arguments()
 
     # Vectorize the input
-    features, labels = vectorize(args["good_path"], args["mal_path"])
+    features, labels = vectorize(args["good_path"], args["mal_path"], args["adverse"])
 
     # Grid Search
     if args["mode"] == "grid" :
@@ -50,6 +50,9 @@ def vectorize(good_path, mal_path, adverse):
     # Concatenate good and mal samples
     perms = gdprm + mlprm
 
+    print("perms:")
+    print(perms)
+
     # append the labels
     # good is labeled 0
     # malware is labeled 1
@@ -59,6 +62,10 @@ def vectorize(good_path, mal_path, adverse):
     for x in mlprm:
         labels = np.append(labels, 1)
 
+    print()
+    print("Labels:")
+    print(labels)
+
     # Define the sklearn vectorizer
     count_vect = CountVectorizer(input=u'content', analyzer=u'word',
                                  token_pattern='(\\b(:?uses-|optional-)?permission:\s[^\s]*)')
@@ -66,6 +73,9 @@ def vectorize(good_path, mal_path, adverse):
 
     # vectorize input
     features = count_vect.fit_transform(perms)
+
+    print("Features:")
+    print(features)
 
     # convert to dense matrix
     features = features.todense()

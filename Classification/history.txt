@@ -1,0 +1,1000 @@
+ 1014  cd ..
+ 1015  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt" --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06
+ 1016  cd Classification/
+ 1017  nano LoadModel.py 
+ 1018  cd ..
+ 1019  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt" --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06
+ 1020  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt" --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06.h5
+ 1021  ls
+ 1022  git add *
+ 1023  git commit -m ""
+ 1024  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1025  git add *
+ 1026  git commit -m "update load"
+ 1027  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1028  cd Classification/
+ 1029  nano LoadModel.py 
+ 1030  cd ..
+ 1031  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt" --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06
+ 1032  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt" --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06.h5
+ 1033  git add *
+ 1034  git commit -m "a"
+ 1035  git push https://github.com/wgranthatcher add-3-models
+ 1036  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1037  ls
+ 1038  cd 757Project/
+ 1039  ls
+ 1040  cd Data
+ 1041  ls
+ 1042  python ../Data_prepro.py 
+ 1043  ls
+ 1044  cd ..
+ 1045  ls
+ 1046  python Hists_full.py 
+ 1047  python Data_prepro.py 
+ 1048  ls
+ 1049  cd dataP
+ 1050  cd ..
+ 1051  ls
+ 1052  cd 757Project/
+ 1053  cd DataPro/
+ 1054  ls
+ 1055  ls -l
+ 1056  cd ..
+ 1057  cd 757Project/
+ 1058  ls
+ 1059  git add .
+ 1060  git commit -m "update"
+ 1061  git push https://github.com/wgranthatcher/757Project
+ 1062  python Hists_full.py 
+ 1063  ls
+ 1064  cd Figures/
+ 1065  cd Digital_Software_v1_00/
+ 1066  ls
+ 1067  cd..
+ 1068  cd ..
+ 1069  lsd
+ 1070  ls
+ 1071  nano Hists_full.py 
+ 1072  python Hists_votes_dist.py 
+ 1073  nano Hists_full.py 
+ 1074  nano Hists_votes_dist.py 
+ 1075  cd 757Project/
+ 1076  ls
+ 1077  python Hists_votes_dist.py 
+ 1078  ls
+ 1079  cd ClassificationCompetition/
+ 1080  ls
+ 1081  nano KTF.py 
+ 1082  python KTF.py 
+ 1083  python KTF.py --epochs 32 --batch_size 16 --save True
+ 1084  git clone https://github.com/wgranthatcher/ClassificationCompetition
+ 1085  ls
+ 1086  cd Thingi10K/
+ 1087  ls
+ 1088  cd ..
+ 1089  cd ClassificationCompetition/
+ 1090  ls
+ 1091  python Basic.py
+ 1092  cd ..
+ 1093  cdD
+ 1094  cd DeepLearning
+ 1095  ls
+ 1096  cd Models/
+ 1097  ls
+ 1098  cd ..
+ 1099  ls
+ 1100  cd ClassificationCompetition/
+ 1101  ls
+ 1102  nano Class2.py
+ 1103  python Class2.py
+ 1104  ls
+ 1105  cd 757
+ 1106  cd 757Project/
+ 1107  ls
+ 1108  nano Hists_full.py 
+ 1109  python Hists_full.py 
+ 1110  git add .
+ 1111  git commit -m "new colors"
+ 1112  git push https://github.com/wgranthatcher/757Project
+ 1113  python Hists_full.py 
+ 1114  git add .
+ 1115  git commit -m "more new colors"
+ 1116  git push https://github.com/wgranthatcher/757Project
+ 1117  ls
+ 1118  cd DataPro/
+ 1119  ls
+ 1120  ls -l
+ 1121  python Hists_full.py 
+ 1122  d ..
+ 1123  cd ..
+ 1124  python Hists_full.py 
+ 1125  git add .
+ 1126  git commit -m "more more new colors"
+ 1127  git push https://github.com/wgranthatcher/757Project
+ 1128  python Hists_full.py 
+ 1129  git add .
+ 1130  git commit -m "more more more new colors"
+ 1131  git push https://github.com/wgranthatcher/757Project
+ 1132  git add .
+ 1133  git commit -m "more more more new colors"
+ 1134  git push https://github.com/wgranthatcher/757Project
+ 1135  ls
+ 1136  nano Hists
+ 1137  nano Hists_full.py 
+ 1138  python Hists_full.py 
+ 1139  git add .
+ 1140  git commit -m "updated vote Hists"
+ 1141  git push https://github.com/wgranthatcher/757Project
+ 1142  cd Data
+ 1143  ls
+ 1144  git pull https://github.com/wgranthatcher/757Project
+ 1145  cd ..
+ 1146  ls
+ 1147  cd Data
+ 1148  ;S
+ 1149  LS
+ 1150  ls
+ 1151  cd ..
+ 1152  ls
+ 1153  nano Descript.py 
+ 1154  python Descript.py 
+ 1155  nano Descript.py 
+ 1156  python Descript.py 
+ 1157  nano Descript.py 
+ 1158  python Descript.py 
+ 1159  ls
+ 1160  cd 757Project/
+ 1161  ls
+ 1162  cd ..
+ 1163  cd 757Project/
+ 1164  cd Figures/
+ 1165  ls
+ 1166  cd ..
+ 1167  nano Hists_full.py 
+ 1168  python Hists_full.py 
+ 1169  git add .
+ 1170  git commit -m "hope this fig is gud"
+ 1171  git commit push https://github.com/wgranthatcher/757Project
+ 1172  git commit push https://github.com/wgranthatcher/757Project master
+ 1173  ls
+ 1174  git push https://github.com/wgranthatcher/757Project master
+ 1175  ls
+ 1176  cd Figures/
+ 1177  ls
+ 1178  cd Automotive_v1_00/
+ 1179  ls
+ 1180  ls
+ 1181  cd 757Project/
+ 1182  ls
+ 1183  nano Results.txt 
+ 1184  nano Descript.py 
+ 1185  python Descript.py 
+ 1186  nano Descript.py 
+ 1187  nano Results.txt 
+ 1188  git add .
+ 1189  git commit -m "update Hists and Results"
+ 1190  git push https://github.com/wgranthatcher/757Project
+ 1191  git config --global user.name "wgranthatcher"
+ 1192  git push https://github.com/wgranthatcher/757Project
+ 1193  nano Hists_votes_dist.py 
+ 1194  git add .
+ 1195  git commit -m "update Hists and Results again"
+ 1196  git push https://github.com/wgranthatcher/757Project
+ 1197  nano Hists_votes_dist.py 
+ 1198  git add .
+ 1199  git commit -m "update Hists and Results again 2"
+ 1200  git push https://github.com/wgranthatcher/757Project
+ 1201  nano Hists_votes_dist.py 
+ 1202  git add .
+ 1203  git commit -m "update Hists and Results again 3"
+ 1204  git push https://github.com/wgranthatcher/757Project
+ 1205  python Hists_votes_dist.py 
+ 1206  git add .
+ 1207  git commit -m "update Hists and Results again 4"
+ 1208  git push https://github.com/wgranthatcher/757Project
+ 1209  ls
+ 1210  nano Hists_full.py 
+ 1211  ls
+ 1212  git pull https://github.com/wgranthatcher/757Project
+ 1213  ls
+ 1214  rm LaTeX/
+ 1215  rm -d LaTeX/
+ 1216  rm -r LaTeX/
+ 1217  ls
+ 1218  nano Basic.py 
+ 1219  python Basic.py 
+ 1220  nano Basic.py 
+ 1221  python Basic.py 
+ 1222  nano Basic.py 
+ 1223  python Basic.py 
+ 1224  cd Data
+ 1225  ls
+ 1226  cat /etc/os-release
+ 1227  cd ..
+ 1228  git add .
+ 1229  git commit -m "updte"
+ 1230  git push https://github.com/wgranthatcher/757Project
+ 1231  ls
+ 1232  git pull https://github.com/wgranthatcher/757Project
+ 1233  ls
+ 1234  git pull https://github.com/wgranthatcher/757Project
+ 1235  ls
+ 1236  cd Figures/
+ 1237  ls
+ 1238  cd ..
+ 1239  ls
+ 1240  nano Basic.py 
+ 1241  git add .
+ 1242  git commit -m "updte 1"
+ 1243  git push https://github.com/wgranthatcher/757Project
+ 1244  nano Basic.py 
+ 1245  python Basic.py 
+ 1246  nano Basic.py 
+ 1247  git add .
+ 1248  git commit -m "remove dates"
+ 1249  git push https://github.com/wgranthatcher/757Project
+ 1250  git pull https://github.com/wgranthatcher/757Project
+ 1251  python Basic.py 
+ 1252  nano Basic.py 
+ 1253  python Basic.py 
+ 1254  nano BasicResults.txt 
+ 1255  nano Basic.py 
+ 1256  python Basic.py 
+ 1257  nano Basic.py 
+ 1258  python Basic.py 
+ 1259  nano Basic.py 
+ 1260  python Basic.py 
+ 1261  nano Basic.py 
+ 1262  python Basic.py 
+ 1263  nano Basic.py 
+ 1264  python Basic.py 
+ 1265  nano Basic.py 
+ 1266  python Basic.py 
+ 1267  ano Basic.py 
+ 1268  nano Basic.py 
+ 1269  nano Basic.py 
+ 1270  python Basic.py 
+ 1271  ls
+ 1272  cd 757
+ 1273  cd 757Project/
+ 1274  ls
+ 1275  ls
+ 1276  ls 
+ 1277  cd 757Project/
+ 1278  ls
+ 1279  ls
+ 1280  cd 757Project/
+ 1281  ls
+ 1282  nano Data_prepro.py 
+ 1283  python Data_prepro.py 
+ 1284  nano Data_prepro.py 
+ 1285  python Data_prepro.py 
+ 1286  nano Data_prepro.py 
+ 1287  python Data_prepro.py 
+ 1288  nano Data_prepro.py 
+ 1289  python Data_prepro.py 
+ 1290  nano Data_prepro.py 
+ 1291  python Data_prepro.py 
+ 1292  nano Data_prepro.py 
+ 1293  python Data_prepro.py 
+ 1294  nano Data_prepro.py 
+ 1295  python Data_prepro.py 
+ 1296  nano Data_prepro.py 
+ 1297  python Data_prepro.py 
+ 1298  nano Data_prepro.py 
+ 1299  python Data_prepro.py 
+ 1300  nano Data_prepro.py 
+ 1301  python Data_prepro.py 
+ 1302  nano Data_prepro.py 
+ 1303  python Data_prepro.py 
+ 1304  cd DataPro/
+ 1305  ls
+ 1306  nano Apparel_v1_00.tsv 
+ 1307  nano Apparel1000.tsv 
+ 1308  cd ..
+ 1309  nano Data_prepro.py 
+ 1310  python Data_prepro.py 
+ 1311  nano Data_prepro.py 
+ 1312  python Data_prepro.py 
+ 1313  cd Data
+ 1314  ls
+ 1315  cd ..
+ 1316  python Data_prepro.py 
+ 1317  nano Data_prepro.py 
+ 1318  python Data_prepro.py 
+ 1319  nano Data_prepro.py 
+ 1320  python Data_prepro.py 
+ 1321  nano Data_prepro.py 
+ 1322  python Data_prepro.py 
+ 1323  nano Data_prepro.py 
+ 1324  python Data_prepro.py 
+ 1325  nano Data_prepro.py 
+ 1326  python Data_prepro.py 
+ 1327  nano Data_prepro.py 
+ 1328  python Data_prepro.py 
+ 1329  nano Data_prepro.py 
+ 1330  python Data_prepro.py 
+ 1331  nano Data_prepro.py 
+ 1332  python Data_prepro.py 
+ 1333  nano Data_prepro.py 
+ 1334  python Data_prepro.py 
+ 1335  nano Data_prepro.py 
+ 1336  python Data_prepro.py 
+ 1337  nano Data_prepro.py 
+ 1338  python Data_prepro.py 
+ 1339  nano Data_prepro.py 
+ 1340  python Data_prepro.py 
+ 1341  nano Data_prepro.py 
+ 1342  python Data_prepro.py 
+ 1343  ano Data_prepro.py 
+ 1344  nano Data_prepro.py 
+ 1345  ano Data_prepro.py 
+ 1346  nano Data_prepro.py 
+ 1347  python Data_prepro.py 
+ 1348  nano Data_prepro.py 
+ 1349  python Data_prepro.py 
+ 1350  nano Data_prepro.py 
+ 1351  python Data_prepro.py 
+ 1352  nano Data_prepro.py 
+ 1353  python Data_prepro.py 
+ 1354  nano Data_prepro.py 
+ 1355  python Data_prepro.py 
+ 1356  nano Data_prepro.py 
+ 1357  python Data_prepro.py 
+ 1358  nano Data_prepro.py 
+ 1359  python Data_prepro.py 
+ 1360  ls
+ 1361  cd Data
+ 1362  ls
+ 1363  python ../Data_prepro.py 
+ 1364  ls
+ 1365  cd ..
+ 1366  ls
+ 1367  nano Hists_full.py 
+ 1368  python Hists_full.py 
+ 1369  cd DataPro/
+ 1370  ls
+ 1371  cd ..
+ 1372  ls
+ 1373  python Hists_full.py 
+ 1374  nano Hists_full.py 
+ 1375  ls
+ 1376  nano Hists_full.py 
+ 1377  exit
+ 1378  ls
+ 1379  exi
+ 1380  ls
+ 1381  cd 757Project/
+ 1382  ls
+ 1383  cd Data
+ 1384  ls
+ 1385  python ../Data_prepro.py 
+ 1386  ls
+ 1387  cd 757Project/
+ 1388  ls
+ 1389  nano Basic.py 
+ 1390  python Basic.py 
+ 1391  nano Basic.py 
+ 1392  python Basic.py 
+ 1393  nano Basic.py 
+ 1394  git add *
+ 1395  git commit -m "removed failed product_parent"
+ 1396  git push https://github.com/wgranthatcher/757Project
+ 1397  python Basic.py 
+ 1398  cd 757Project/
+ 1399  ls
+ 1400  git add *
+ 1401  git commit -m "text updated?"
+ 1402  git push https://github.com/wgranthatcher/757Project
+ 1403  mkdir Thingi10K
+ 1404  ls
+ 1405  cd Thingi10K/
+ 1406  ls
+ 1407  cd 757Project/
+ 1408  ls
+ 1409  python Hists_full.py 
+ 1410  cd ClassificationCompetition/
+ 1411  ls
+ 1412  git pull https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1413  ls
+ 1414  cd ..
+ 1415  ls
+ 1416  cd ClassificationCompetition/
+ 1417  ls
+ 1418  cd ..
+ 1419  ls
+ 1420  rm ClassificationCompetition/
+ 1421  rm -r ClassificationCompetition/
+ 1422  y
+ 1423  ls
+ 1424  git clone https://github.com/wgranthatcher/ClassificationCompetition master
+ 1425  ls
+ 1426  cd master/
+ 1427  ls
+ 1428  cd ..
+ 1429  rm -r master
+ 1430  y
+ 1431  git clone https://github.com/wgranthatcher/ClassificationCompetition ClassificationCompetition
+ 1432  ls
+ 1433  cd ClassificationCompetition/
+ 1434  ls
+ 1435  python -m KTF --epochs 1 --tr 20 --batch_size 20000 --save True
+ 1436  nano KTF.py 
+ 1437  python -m KTF --epochs 1 --tr 20 --batch_size 20000 --save True
+ 1438  nano KTF.py 
+ 1439  python -m KTF --epochs 1 --tr 20 --batch_size 20000 --save True
+ 1440  nano KTF.py 
+ 1441  python -m KTF --epochs 1 --tr 20 --batch_size 20000 --save True
+ 1442  python -m KTF --epochs 1 --tr 20 --batch_size 2000 --save True
+ 1443  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1444  nano KTF.py 
+ 1445  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1446  nano KTF.py 
+ 1447  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1448  nano KTF.py 
+ 1449  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1450  nano KTF.py 
+ 1451  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1452  nano KTF.py 
+ 1453  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1454  nano KTF.py 
+ 1455  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1456  nano KTF.py 
+ 1457  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1458  nano KTF.py 
+ 1459  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1460  nano KTF.py 
+ 1461  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1462  nano KTF.py 
+ 1463  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1464  nano KTF.py 
+ 1465  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1466  nano KTF.py 
+ 1467  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1468  nano KTF.py 
+ 1469  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1470  nano KTF.py 
+ 1471  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1472  nano KTF.py 
+ 1473  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1474  nano KTF.py 
+ 1475  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1476  nano KTF.py 
+ 1477  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1478  nano KTF.py 
+ 1479  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1480  nano KTF.py 
+ 1481  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1482  nano KTF.py 
+ 1483  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1484  nano KTF.py 
+ 1485  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1486  nano KTF.py 
+ 1487  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1488  nano KTF.py 
+ 1489  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1490  nano KTF.py 
+ 1491  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1492  git add *
+ 1493  git commit -m "Keras TF updates"
+ 1494  git push https://github.com/wgranthatcher/ClassificationCompetition master
+ 1495  ls
+ 1496  mkdir Models
+ 1497  mkdir Results
+ 1498  ls
+ 1499  git add *
+ 1500  git commit -m "Keras TF folders"
+ 1501  git push https://github.com/wgranthatcher/ClassificationCompetition master
+ 1502  nano KTF.py 
+ 1503  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1504  nano KTF.py 
+ 1505  python -m KTF --epochs 6 --tr 20 --batch_size 64 --save True
+ 1506  nano KTF.py 
+ 1507  python -m KTF --epochs 6 --tr 70 --batch_size 64 --save True
+ 1508  git add *
+ 1509  git commit -m "keras update"
+ 1510  git push https://github.com/wgranthatcher/ClassificationCompetition master
+ 1511  git pull https://github.com/wgranthatcher/ClassificationCompetition master
+ 1512  ls
+ 1513  python -m KTF --epochs 6 --tr 70 --batch_size 64 --save True
+ 1514  nano KTF.py 
+ 1515  git pull https://github.com/wgranthatcher/ClassificationCompetition master
+ 1516  python -m KTF --epochs 6 --tr 70 --batch_size 64 --save True
+ 1517  nano KTF.py 
+ 1518  python -m KTF --epochs 6 --tr 70 --batch_size 64 --save True
+ 1519  nano KTF.py 
+ 1520  git add *
+ 1521  git commit -m "update classes"
+ 1522  git push https://github.com/wgranthatcher/ClassificationCompetition master
+ 1523  git pull https://github.com/wgranthatcher/ClassificationCompetition master
+ 1524  python -m KTF --epochs 6 --tr 70 --batch_size 64 --save True
+ 1525  nano KTF.py 
+ 1526  python -m KTF --epochs 6 --tr 70 --batch_size 64 --save True
+ 1527  nano KTF.py 
+ 1528  python -m KTF --epochs 6 --tr 70 --batch_size 64 --save True
+ 1529  nano KTF.py 
+ 1530  python -m KTF --epochs 6 --tr 70 --batch_size 64 --save True
+ 1531  python -m KTF --epochs 6 --tr 70 --batch_size 16 --save True
+ 1532  nano KTF.py 
+ 1533  python -m KTF --epochs 6 --tr 70 --batch_size 16 --save True
+ 1534  python -m KTF --epochs 1 --tr 70 --batch_size 16 --save True
+ 1535  nano KTF.py 
+ 1536  python -m KTF --epochs 1 --tr 70 --batch_size 16 --save True
+ 1537  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1538  ls
+ 1539  nano KTF.py 
+ 1540  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1541  nano KTF.py 
+ 1542  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1543  nano KTF.py 
+ 1544  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1545  nano KTF.py 
+ 1546  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1547  ls
+ 1548  cd Results/
+ 1549  ls
+ 1550  cd ..
+ 1551  ls
+ 1552  cd Cl
+ 1553  cd ClassificationCompetition/
+ 1554  ls
+ 1555  nano KTF.py 
+ 1556  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1557  nano KTF.py 
+ 1558  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1559  nano KTF.py 
+ 1560  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1561  ls
+ 1562  cd Results/
+ 1563  ls
+ 1564  cd ..
+ 1565  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1566  nano KTF.py 
+ 1567  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1568  ls
+ 1569  cd ..
+ 1570  ls
+ 1571  cd ..
+ 1572  ls
+ 1573  cd grant309/
+ 1574  cd ClassificationCompetition/
+ 1575  ls
+ 1576  nano KTF.py 
+ 1577  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1578  ls
+ 1579  cd Results/
+ 1580  ls
+ 1581  nano create_thousand_layer10282018-2225.txt 
+ 1582  cd ..
+ 1583  nano KTF.py 
+ 1584  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1585  cd Results/
+ 1586  ls
+ 1587  nano create_thousand_layer10282018-2241.txt 
+ 1588  cd ..
+ 1589  git add *
+ 1590  git commit -m "print statements updated"
+ 1591  git push https://github.com/wgranthatcher/ClassificationCompetition master
+ 1592  nano KTF.py 
+ 1593  python -m KTF --epochs 1 --tr 70 --batch_size 64 --save True
+ 1594  ls
+ 1595  cs Results
+ 1596  ls
+ 1597  cd Results/
+ 1598  ls
+ 1599  nano create_thousand_layer10282018-2301.txt 
+ 1600  ls
+ 1601  nano KTF.py 
+ 1602  cd ..
+ 1603  nano KTF.py 
+ 1604  python -m KTF_bin --epochs 1 --tr 70 --batch_size 64 --save True
+ 1605  ls
+ 1606  nano KTF.py 
+ 1607  python -m KTF_mult --epochs 1 --tr 70 --batch_size 64 --save True
+ 1608  ls
+ 1609  python -m KTF_mult --epochs 32 --tr 70 --batch_size 16 --save True
+ 1610  python -m KTF --epochs 32 --tr 70 --batch_size 16 --save True
+ 1611  git add *
+ 1612  git commit -m "finalized working"
+ 1613  git push https://github.com/wgranthatcher/ClassificationCompetition master
+ 1614  python -m KTF --epochs 32 --tr 70 --batch_size 16 --save True
+ 1615  ls
+ 1616  cd 757Project/
+ 1617  ls
+ 1618  git pull https://github.com/wgranthatcher/757Project master
+ 1619  ls
+ 1620  nano Hists_full.py 
+ 1621  git pull https://github.com/wgranthatcher/757Project master
+ 1622  python Hists_full.py 
+ 1623  ls
+ 1624  cd Data/
+ 1625  ls
+ 1626  python 757Project.Hists_full.py 
+ 1627  python ../Hists_full.py 
+ 1628  nano ../Hists_full.py 
+ 1629  python ../Hists_full.py 
+ 1630  nano ../Hists_full.py 
+ 1631  python ../Hists_full.py 
+ 1632  nano ../Hists_full.py 
+ 1633  python ../Hists_full.py 
+ 1634  nano ../Hists_full.py 
+ 1635  python ../Hists_full.py 
+ 1636  nano ../Hists_full.py 
+ 1637  python ../Hists_full.py 
+ 1638  nano ../Hists_full.py 
+ 1639  python ../Hists_full.py 
+ 1640  nano ../Hists_full.py 
+ 1641  python ../Hists_full.py 
+ 1642  nano ../Hists_full.py 
+ 1643  python ../Hists_full.py 
+ 1644  nano ../Hists_full.py 
+ 1645  python ../Hists_full.py 
+ 1646  nano ../Hists_full.py 
+ 1647  python ../Hists_full.py 
+ 1648  nano ../Hists_full.py 
+ 1649  python ../Hists_full.py 
+ 1650  nano ../Hists_full.py 
+ 1651  python ../Hists_full.py 
+ 1652  ls
+ 1653  rm \home\grant309\757Project\Figures\Apparel_v1_00
+ 1654  rm '\home\grant309\757Project\Figures\Apparel_v1_00'
+ 1655  rm -f '\home\grant309\757Project\Figures\Apparel_v1_00'
+ 1656  ls
+ 1657  rm -d '\home\grant309\757Project\Figures\Apparel_v1_00'
+ 1658  ls
+ 1659  cd ..
+ 1660  ls
+ 1661  cd Data/
+ 1662  ls
+ 1663  nano ../Hists_full.py 
+ 1664  python ../Hists_full.py 
+ 1665  ls
+ 1666  cd ..
+ 1667  ls
+ 1668  cd Figures/
+ 1669  ls
+ 1670  cd Apparel_v1_00/
+ 1671  ls
+ 1672  nano ../Hists_full.py 
+ 1673  cd Data
+ 1674  ls
+ 1675  cd ..
+ 1676  ls
+ 1677  cd Data/
+ 1678  nano ../Hists_full.py 
+ 1679  python ../Hists_full.py 
+ 1680  ls
+ 1681  cd ..
+ 1682  cd Figures/
+ 1683  cd Apparel_v1_00/
+ 1684  ls
+ 1685  cd ..
+ 1686  git add .
+ 1687  git commit -m "Updated saving features"
+ 1688  git push https://github.com/wgranthatcher/757Project master
+ 1689  git pull https://github.com/wgranthatcher/757Project master
+ 1690  ls
+ 1691  rm customer_id.png 
+ 1692  rm helpful_votes.png 
+ 1693  rm product_parent.png 
+ 1694  rm star_rating.png 
+ 1695  rm total_votes.png 
+ 1696  ls
+ 1697  git add .
+ 1698  git commit -m "remove figures"
+ 1699  git push https://github.com/wgranthatcher/757Project master
+ 1700  ls
+ 1701  cd Figures/
+ 1702  ls
+ 1703  cd Apparel_v1_00/
+ 1704  ls
+ 1705  cd ..
+ 1706  ls
+ 1707  cd Data/
+ 1708  ls
+ 1709  python ../Hists_full.py 
+ 1710  CD ..
+ 1711  cd ..
+ 1712  ls
+ 1713  git add .
+ 1714  git commit -m "first test Apparel"
+ 1715  git push https://github.com/wgranthatcher/757Project master
+ 1716  ls
+ 1717  cd Data/
+ 1718  ls
+ 1719  python ../Hists_full.py 
+ 1720  git add .
+ 1721  git commit -m "updated figs"
+ 1722  cd ..
+ 1723  ls
+ 1724  nano gitignore
+ 1725  ls -a
+ 1726  nano .gitignore
+ 1727  git add .
+ 1728  git commit -m "updated figs"
+ 1729  git push https://github.com/wgranthatcher/757Project master
+ 1730  ls
+ 1731  cd Data/
+ 1732  ls
+ 1733  python ../Hists_full.py 
+ 1734  ls
+ 1735  cd ..
+ 1736  git add .
+ 1737  git commit -m "more Figures"
+ 1738  git push https://github.com/wgranthatcher/757Project master
+ 1739  git pull https://github.com/wgranthatcher/757Project master
+ 1740  ls
+ 1741  nano Data_prepro.py 
+ 1742  python Data_prepro.py 
+ 1743  ls
+ 1744  cd DataPro/
+ 1745  ls
+ 1746  nano Apparel1000.tsv/
+ 1747  cd Apparel1000.tsv/
+ 1748  ls
+ 1749  nano Apparel1000.tsv
+ 1750  ls
+ 1751  cd ..
+ 1752  rm -d Apparel1000.tsv/
+ 1753  ls
+ 1754  cd ..
+ 1755  nano Data_prepro.py 
+ 1756  python Data_prepro.py 
+ 1757  ls
+ 1758  cd DataPro/
+ 1759  ls
+ 1760  nano Apparel1000.tsv 
+ 1761  rm Apparel1000.tsv 
+ 1762  cd ..
+ 1763  ls
+ 1764  nano Data_prepro.py 
+ 1765  python Data_prepro.py 
+ 1766  cd DataPro/
+ 1767  ls
+ 1768  nano Apparel1000.tsv 
+ 1769  cd ..
+ 1770  ls
+ 1771  nano .gitignore 
+ 1772  nano Data_prepro.py 
+ 1773  python Data_prepro.py 
+ 1774  git add .
+ 1775  git commit -m "updated preprocessing .py"
+ 1776  git push https://github.com/wgranthatcher/757Project master
+ 1777  nano Data_prepro.py 
+ 1778  cd Data
+ 1779  cd ..
+ 1780  python Data_prepro.py 
+ 1781  nano Data_prepro.py 
+ 1782  ls
+ 1783  python Data_prepro.py 
+ 1784  ls
+ 1785  cd DeepLearning
+ 1786  ls
+ 1787  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer --save True
+ 1788  top
+ 1789  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer --save True
+ 1790  htop
+ 1791  ps -A
+ 1792  pstree
+ 1793  top 1222
+ 1794  top -help
+ 1795  top -o %CPU
+ 1796  top -H
+ 1797  top -o %CPU
+ 1798  top -c
+ 1799  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer --save True
+ 1800  top
+ 1801  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model dual_large --save True
+ 1802  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_1000.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model dual_large --save True
+ 1803  ls
+ 1804  cd Data/
+ 1805  ls
+ 1806  cd ..
+ 1807  ls
+ 1808  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model dual_large --save True
+ 1809  ls
+ 1810  cd Models/
+ 1811  ls
+ 1812  cd ..
+ 1813  ls
+ 1814  git add *
+ 1815  git commit -m 
+ 1816  git commit -m "First model saved"
+ 1817  git push https://github/wgranthatcher add-3-models
+ 1818  git push https://github/wgranthatcher/DeepLearning add-3-models
+ 1819  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1820  tail -n 10 Data/benign_badging_full_v2.txt
+ 1821  tail -n 20 Data/benign_badging_full_v2.txt
+ 1822  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model dual_large --save True
+ 1823  ls
+ 1824  cd DA
+ 1825  cd ..
+ 1826  cd Re
+ 1827  cd Res
+ 1828  cd DeepLearning
+ 1829  cd Results/
+ 1830  ls
+ 1831  cd De
+ 1832  cd deepResults/
+ 1833  ls
+ 1834  cd multi_input/
+ 1835  ls
+ 1836  cd fall18/
+ 1837  ls
+ 1838  mkdir loaded
+ 1839  ls
+ 1840  cd loaded/
+ 1841  ls
+ 1842  cd ..
+ 1843  ls
+ 1844  git pull https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1845  ls
+ 1846  cd Classification/
+ 1847  ls
+ 1848  ls 
+ 1849  cd ..
+ 1850  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15
+ 1851  ls 
+ 1852  cd Models/
+ 1853  ls
+ 1854  ls -a
+ 1855  ls -l
+ 1856  ls
+ 1857  cd ..
+ 1858  git add *
+ 1859  git commit -m ""
+ 1860  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1861  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06
+ 1862  cd Classification/
+ 1863  nano LoadModel.py 
+ 1864  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06
+ 1865  cd ..
+ 1866  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06
+ 1867  python -m Classification.LoadModel --good_path "/home/grant309/DeepLearning/Data/benign_badging_1000.txt" --mal_path "/home/grant309/DeepLearning/Data/mal_badging_1000.txt"  --epochs 1 --tr 20 --batch_size 20000 --load dual_large10172018-15:06
+ 1868  ls
+ 1869  cd DeepLearning
+ 1870  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer
+ 1871  ls
+ 1872  cd Classification/
+ 1873  ls
+ 1874  cd ..
+ 1875  ls
+ 1876  mkdir Models
+ 1877  ls
+ 1878  cd Models/
+ 1879  ls]
+ 1880  ls
+ 1881  cd ..
+ 1882  cd Classification/
+ 1883  ls
+ 1884  nano KTF_dual_input.py
+ 1885  ls
+ 1886  cd ..
+ 1887  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1888  cd Classification/
+ 1889  ls
+ 1890  nano KTF_dual_input.py
+ 1891  cd ..
+ 1892  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1893  git push -f https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1894  git commit -m "Grant's server update with print statements"
+ 1895  git config --global user.email "whatch2@students.towson.edu"
+ 1896  git config --global user.name "wgranthatcher"
+ 1897  git commit -m "Grant's server update with print statements"
+ 1898  git add *
+ 1899  git commit -m "Grant's server update with print statements"
+ 1900  git push https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1901  ls
+ 1902  git pull https://github.com/wgranthatcher/DeepLearning add-3-models
+ 1903  ls
+ 1904  cd Classification/
+ 1905  ls
+ 1906  cd KTF_
+ 1907  nano KTF_dual_input.py
+ 1908  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer_perm
+ 1909  cd ..
+ 1910  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer_perm
+ 1911  cd Classification/
+ 1912  ls
+ 1913  nano KTF_dual_input.py
+ 1914  cd ..
+ 1915  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer_perm
+ 1916  cd Classification/
+ 1917  nano KTF_dual_input.py
+ 1918  cd ..
+ 1919  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer_perm
+ 1920  cd Classification/
+ 1921  nano KTF_dual_input.py
+ 1922  cd ..
+ 1923  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer_perm
+ 1924  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer_perm --save
+ 1925  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer_perm --save True
+ 1926  python -m Classification.KTF_dual_input --good_path "/home/grant309/DeepLearningResearch/Data/benign_badging_full_v2.txt" --mal_path "/home/grant309/DeepLearningResearch/Data/mal_badging_full_v2.txt"  --mode final --epochs 1 --tr 20 --batch_size 20000 --model oneLayer --save True
+ 1927  ls
+ 1928  top
+ 1929  ls
+ 1930  top
+ 1931  top -pid 88215
+ 1932  top -pid '88215'
+ 1933  top
+ 1934  ls
+ 1935  cd 757Project/
+ 1936  ls
+ 1937  git add *
+ 1938  git commit -m "another attempt"
+ 1939  git push https://github.com/wgranthatcher/757PRoject
+ 1940  git pull https://github.com/wgranthatcher/757PRoject
+ 1941  python Sentiment.py > log.txt 2>&1 &
+ 1942  nano log.txt 
+ 1943  nano Sentiment
+ 1944  nano Sentiment.py 
+ 1945  python Sentiment.py > log.txt 2>&1 &
+ 1946  nano log.txt 
+ 1947  nano Sentiment.py 
+ 1948  python Sentiment.py > log.txt 2>&1 &
+ 1949  nano log.txt 
+ 1950  nano SentimentResults.txt 
+ 1951  nano Sentiment.py 
+ 1952  git add *
+ 1953  git commit -m "working"
+ 1954  git push https://github.com/wgranthatcher/757PRoject
+ 1955  nano Sentiment.py 
+ 1956  python Sentiment.py > log.txt 2>&1 &
+ 1957  nano log.txt 
+ 1958  nano Sentiment.py 
+ 1959  python Sentiment.py > log.txt 2>&1 &
+ 1960  nano log.txt 
+ 1961  nano Sentiment.py 
+ 1962  nano SentimentNum.py 
+ 1963  nano Sentiment.py 
+ 1964  python Sentiment1.py > log.txt 2>&1 &
+ 1965  nano log.txt 
+ 1966  ls
+ 1967  cd Data
+ 1968  ls
+ 1969  ls -l
+ 1970  cd ..
+ 1971  nano log.txt 
+ 1972  nano Sentiment.py 
+ 1973  git add *
+ 1974  git commit -m "some worked"
+ 1975  git push https://github.com/wgranthatcher/757PRoject
+ 1976  git pull https://github.com/wgranthatcher/757PRoject
+ 1977  ls
+ 1978  nano Sentiment.py 
+ 1979  python Sentiment.py > log.txt 2>&1 &
+ 1980  nano log.txt 
+ 1981  nano SentimentResults.txt 
+ 1982  nano log.txt 
+ 1983  nano SentimentResults.txt 
+ 1984  nano log.txt 
+ 1985  nano SentimentResults.txt 
+ 1986  nano log.txt 
+ 1987  nano SentimentResults.txt 
+ 1988  nano log.txt 
+ 1989  git add *
+ 1990  git commit -m "running"
+ 1991  git push https://github.com/wgranthatcher/757PRoject
+ 1992  nano SentimentResults.txt 
+ 1993  git add *
+ 1994  git commit -m "finished"
+ 1995  git push https://github.com/wgranthatcher/757PRoject
+ 1996  git pull https://github.com/wgranthatcher/757PRoject
+ 1997  ls
+ 1998  cd DeepLearning
+ 1999  ls
+ 2000  history
+ 2001  ls
+ 2002  cd DeepLearning
+ 2003  ls
+ 2004  cd Classification/
+ 2005  ls
+ 2006  cd ls
+ 2007  ls -a
+ 2008  ls -l
+ 2009  ls LoadModel.py
+ 2010  nano LoadModel.py
+ 2011  ls
+ 2012  hist
+ 2013  history

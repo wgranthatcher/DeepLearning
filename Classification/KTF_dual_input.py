@@ -55,13 +55,19 @@ def vectorize(good_path, mal_path):
 
     samples = ben_samples + mal_samples
 
+    print("Samples:")
+    print(samples)
+
     labels = np.array([])
     for x in ben_samples:
         labels = np.append(labels, 0)
     for x in mal_samples:
         labels = np.append(labels, 1)
 
-    print("Samples: ")
+    print("Labels:")
+    print(labels)
+
+    print("Samples Size: ")
     print(sys.getsizeof(samples))
 
     #regular expressions for each desired data type
@@ -72,6 +78,9 @@ def vectorize(good_path, mal_path):
     perm_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=perm_pattern))
     feat_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=feat_pattern))
     comb_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=comb_pattern))
+
+    print("Comb Vect:")
+    print(comb_vect)
 
     print("Perm Vect: ")
     print(sys.getsizeof(perm_vect))
