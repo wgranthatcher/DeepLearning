@@ -90,7 +90,7 @@ def vectorize(good_path, mal_path):
 
     # ---- save library as .json file ----
     #json.dump(perm_vect.vocabulary_, open('perm_vocab.json', mode = 'wb'))
-    #perm_vocab = json.load(open('perm_vect.json', mode = 'rb'))
+    #perm_vocab = json.load(open('perm_vocab.json', mode = 'rb'))
     #perm_vect.vocabulary_ = perm_vocab
     # ---- save library as .json file ----
 
@@ -101,7 +101,7 @@ def vectorize(good_path, mal_path):
 
     # ---- save library as .json file ----
     #json.dump(feat_vect.vocabulary_, open('feat_vocab.json', mode = 'wb'))
-    #feat_vocab = json.load(open('feat_vect.json', mode = 'rb'))
+    #feat_vocab = json.load(open('feat_vocab.json', mode = 'rb'))
     #feat_vect.vocabulary_ = feat_vocab
     # ---- save library as .json file ----
 
@@ -112,7 +112,7 @@ def vectorize(good_path, mal_path):
 
     # ---- load library as .json file ----
     #json.dump(comb_vect.vocabulary_, open('comb_vocab.json', mode = 'wb'))
-    comb_vocab = json.load(open('comb_vect.json', mode = 'rb'))
+    comb_vocab = json.load(open('comb_vocab.json', mode = 'rb'))
     comb_vect.vocabulary_ = comb_vocab
     # ---- load library as .json file ----
 
