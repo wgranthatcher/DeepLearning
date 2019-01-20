@@ -89,7 +89,7 @@ def vectorize(good_path, mal_path):
     perm_inputs = np.array(perm_inputs_dense)
 
     # ---- save library as .json file ----
-    json.dump(perm_vect.vocabulary_, open('perm_vocab.json', mode = 'wb'))
+    #json.dump(perm_vect.vocabulary_, open('perm_vocab.json', mode = 'wb'))
     #perm_vocab = json.load(open('perm_vect.json', mode = 'rb'))
     #perm_vect.vocabulary_ = perm_vocab
     # ---- save library as .json file ----
@@ -100,13 +100,23 @@ def vectorize(good_path, mal_path):
     feat_inputs = np.array(feat_inputs_dense)
 
     # ---- save library as .json file ----
-    json.dump(feat_vect.vocabulary_, open('feat_vocab.json', mode = 'wb'))
+    #json.dump(feat_vect.vocabulary_, open('feat_vocab.json', mode = 'wb'))
     #feat_vocab = json.load(open('feat_vect.json', mode = 'rb'))
     #feat_vect.vocabulary_ = feat_vocab
     # ---- save library as .json file ----
 
     # COMBINED FEATURES AND PERMISSIONS
-    comb_inputs_sparse = comb_vect.fit_transform(samples)
+
+    # original
+    #comb_inputs_sparse = comb_vect.fit_transform(samples)
+
+    # ---- load library as .json file ----
+    #json.dump(comb_vect.vocabulary_, open('comb_vocab.json', mode = 'wb'))
+    comb_vocab = json.load(open('comb_vect.json', mode = 'rb'))
+    comb_vect.vocabulary_ = comb_vocab
+    # ---- load library as .json file ----
+
+    comb_inputs_sparse = comb_vect.transform(samples)
     comb_inputs_dense = comb_inputs_sparse.todense()
     comb_inputs = np.array(comb_inputs_dense)
 
@@ -126,12 +136,6 @@ def vectorize(good_path, mal_path):
     print("Comb Inputs (np array):")
     print(comb_inputs)
 
-    # ---- save library as .json file ----
-    json.dump(comb_vect.vocabulary_, open('comb_vocab.json', mode = 'wb'))
-    #comb_vocab = json.load(open('comb_vect.json', mode = 'rb'))
-    #comb_vect.vocabulary_ = comb_vocab
-    # ---- save library as .json file ----
-
     return perm_inputs, feat_inputs, comb_inputs, labels
 
 def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
@@ -143,11 +147,12 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
     feat_width = int(len(feat_inputs[0]))
     comb_width = int(len(comb_inputs[0]))
     print 'perm width: ' + str(perm_width)
+    print 'feat width: ' + str(feat_width)
+    print 'comb width: ' + str(comb_width)
+
     input_ratios = args["input_ratio"]
     models = args["model"]
     size = 32
-
-
 
     #models = {'oneLayer_comb':oneLayer_comb, 'oneLayer_perm':oneLayer_perm, \
     #'oneLayer_feat':oneLayer_feat, 'dual_simple':dual_simple, 'dual_large':dual_large}
