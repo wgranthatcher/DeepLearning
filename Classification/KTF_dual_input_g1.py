@@ -105,11 +105,6 @@ def vectorize(good_path, mal_path):
     #feat_vect.vocabulary_ = feat_vocab
     # ---- save library as .json file ----
 
-    print()
-    print("Comb Vect - Vocabulary: before fit xform")
-    print(comb_vect.vocabulary_)
-    print()
-
     # COMBINED FEATURES AND PERMISSIONS
     comb_inputs_sparse = comb_vect.fit_transform(samples)
     comb_inputs_dense = comb_inputs_sparse.todense()
