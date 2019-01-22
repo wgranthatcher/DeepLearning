@@ -68,9 +68,6 @@ def vectorize(good_path, mal_path):
     for x in mal_samples:
         labels = np.append(labels, 1)
 
-    print("Labels:")
-    print("prints classification labels o (ben) and 1 (mal).")
-
     print("Samples Size: ")
     print(sys.getsizeof(samples))
 
@@ -83,61 +80,74 @@ def vectorize(good_path, mal_path):
     feat_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=feat_pattern))
     comb_vect = CountVectorizer(analyzer=partial(regexp_tokenize, pattern=comb_pattern))
 
-    #print("Perm Vect: ")
-    #print(sys.getsizeof(perm_vect))
-    #print(sys.getsizeof(feat_vect))
-    #print(sys.getsizeof(comb_vect))
-
     time0 = timeit.default_timer()
     #each vectorizer tokenizes via fit_transform() and then is converted to a dense vector
-    perm_inputs_sparse = perm_vect.fit_transform(samples)
+    
+
+    # PERMISSIONS
+    # ---- load library as .json file ----
+    #perm_vocab = json.load(open('perm_vocab.json', mode = 'rb'))
+    #perm_vect.vocabulary_ = perm_vocab
+    # ---- load library as .json file ----
+
+    #perm_inputs_sparse = perm_vect.fit_transform(samples)
+    perm_inputs_sparse = perm_vect.transform(samples)
     perm_inputs_dense = perm_inputs_sparse.todense()
     perm_inputs = np.array(perm_inputs_dense)
 
-    #print("Permissions: ")
-    #print("Sparse: %d" % sys.getsizeof(perm_inputs_sparse))
-    #print("Dense: %d" % sys.getsizeof(perm_inputs_dense))
-    #print("np.array: %d" % sys.getsizeof(perm_inputs))
+    # ---- save library as .json file ----
+    json.dump(perm_vect.vocabulary_, open('perm_vocab.json', mode = 'wb'))
+    # ---- save library as .json file ----
 
-    feat_inputs_sparse = feat_vect.fit_transform(samples)
+
+    # FEATURES
+    # ---- load library as .json file ----
+    #feat_vocab = json.load(open('feat_vocab.json', mode = 'rb'))
+    #feat_vect.vocabulary_ = feat_vocab
+    # ---- load library as .json file ----
+    
+    #feat_inputs_sparse = feat_vect.fit_transform(samples)
+    feat_inputs_sparse = feat_vect.transform(samples)
     feat_inputs_dense = feat_inputs_sparse.todense()
     feat_inputs = np.array(feat_inputs_dense)
 
-    #print()
-    #print("Features: ")
-    #print("Sparse: %d" % sys.getsizeof(feat_inputs_sparse))
-    #print("Dense: %d" % sys.getsizeof(feat_inputs_dense))
-    #print("np.array: %d" % sys.getsizeof(feat_inputs))
+    # ---- save library as .json file ----
+    json.dump(feat_vect.vocabulary_, open('feat_vocab.json', mode = 'wb'))
+    # ---- save library as .json file ----
 
-    comb_inputs_sparse = comb_vect.fit_transform(samples)
+
+    # COMBINED FEATURES AND PERMISSIONS
+    # ---- load library as .json file ----
+    #comb_vocab = json.load(open('comb_vocab.json', mode = 'rb'))
+    #comb_vect.vocabulary_ = comb_vocab
+    # ---- load library as .json file ----
+
+    # original
+    #comb_inputs_sparse = comb_vect.fit_transform(samples)
+    comb_inputs_sparse = comb_vect.transform(samples)
     comb_inputs_dense = comb_inputs_sparse.todense()
     comb_inputs = np.array(comb_inputs_dense)
 
-    print()
-    print("---- Combined ----: ")
-    print("Sparse: %d" % sys.getsizeof(comb_inputs_sparse))
-    print("Dense: %d" % sys.getsizeof(comb_inputs_dense))
-    print("np.array: %d" % sys.getsizeof(comb_inputs))
+    # ---- save library as json ---- 
+    json.dump(comb_vect.vocabulary_, open('comb_vocab.json', mode = 'wb'))
+    # ---- save library as json ---- 
+
 
     print()
-    print("Comb Vect - Vocabulary:")
+    print("Comb Vect - Vocabulary: after fit xform")
     print(comb_vect.vocabulary_)
     print()
     print("Comb Vect - Get Params:")
     print(comb_vect.get_params())
-
-    # ---- save library as .json file ----
-    #json.dump(comb_vect.vocabulary_, open('vocabulary.json', mode = 'wb'))
-    #vocabulary = json.load(open('vocabulary.json', mode = 'rb'))
-    #comb_vect.vocabulary_ = vocabulary
-    # ---- save library as .json file ----
-
-    #print("Combined Inputs SPARSE:")
-    #print(comb_inputs_sparse)
-    #print("Combined Inputs DENSE:")
-    #print(comb_inputs_dense)
-    #print("Combined Inputs DENSE ARRAY:")
-    #print(comb_inputs)
+    print()
+    print("Comb Inputs Sparse:")
+    print(comb_inputs_sparse)
+    print()
+    print("Comb Inputs Dense:")
+    print(comb_inputs_dense)
+    print()
+    print("Comb Inputs (np array):")
+    print(comb_inputs)
 
     return perm_inputs, feat_inputs, comb_inputs, labels
 
@@ -150,11 +160,12 @@ def final_test(args, perm_inputs, feat_inputs, comb_inputs, labels):
     feat_width = int(len(feat_inputs[0]))
     comb_width = int(len(comb_inputs[0]))
     print 'perm width: ' + str(perm_width)
+    print 'feat width: ' + str(feat_width)
+    print 'comb width: ' + str(comb_width)
+
     input_ratios = args["input_ratio"]
     models = args["model"]
     size = 32
-
-
 
     #models = {'oneLayer_comb':oneLayer_comb, 'oneLayer_perm':oneLayer_perm, \
     #'oneLayer_feat':oneLayer_feat, 'dual_simple':dual_simple, 'dual_large':dual_large}
