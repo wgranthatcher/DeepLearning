@@ -83,42 +83,55 @@ def vectorize(good_path, mal_path):
     time0 = timeit.default_timer()
     #each vectorizer tokenizes via fit_transform() and then is converted to a dense vector
     
+    
     # PERMISSIONS
-    perm_inputs_sparse = perm_vect.fit_transform(samples)
+    # ---- load library as .json file ----
+    perm_vocab = json.load(open('perm_vocab.json', mode = 'rb'))
+    perm_vect.vocabulary_ = perm_vocab
+    # ---- load library as .json file ----
+
+    #perm_inputs_sparse = perm_vect.fit_transform(samples)
+    perm_inputs_sparse = perm_vect.transform(samples)
     perm_inputs_dense = perm_inputs_sparse.todense()
     perm_inputs = np.array(perm_inputs_dense)
 
     # ---- save library as .json file ----
     #json.dump(perm_vect.vocabulary_, open('perm_vocab.json', mode = 'wb'))
-    #perm_vocab = json.load(open('perm_vocab.json', mode = 'rb'))
-    #perm_vect.vocabulary_ = perm_vocab
     # ---- save library as .json file ----
 
+
     # FEATURES
-    feat_inputs_sparse = feat_vect.fit_transform(samples)
+    # ---- load library as .json file ----
+    feat_vocab = json.load(open('feat_vocab.json', mode = 'rb'))
+    feat_vect.vocabulary_ = feat_vocab
+    # ---- load library as .json file ----
+    
+    #feat_inputs_sparse = feat_vect.fit_transform(samples)
+    feat_inputs_sparse = feat_vect.transform(samples)
     feat_inputs_dense = feat_inputs_sparse.todense()
     feat_inputs = np.array(feat_inputs_dense)
 
     # ---- save library as .json file ----
     #json.dump(feat_vect.vocabulary_, open('feat_vocab.json', mode = 'wb'))
-    #feat_vocab = json.load(open('feat_vocab.json', mode = 'rb'))
-    #feat_vect.vocabulary_ = feat_vocab
     # ---- save library as .json file ----
 
+
     # COMBINED FEATURES AND PERMISSIONS
-
-    # original
-    #comb_inputs_sparse = comb_vect.fit_transform(samples)
-
     # ---- load library as .json file ----
-    #json.dump(comb_vect.vocabulary_, open('comb_vocab.json', mode = 'wb'))
     comb_vocab = json.load(open('comb_vocab.json', mode = 'rb'))
     comb_vect.vocabulary_ = comb_vocab
     # ---- load library as .json file ----
 
+    # original
+    #comb_inputs_sparse = comb_vect.fit_transform(samples)
     comb_inputs_sparse = comb_vect.transform(samples)
     comb_inputs_dense = comb_inputs_sparse.todense()
     comb_inputs = np.array(comb_inputs_dense)
+
+    # ---- save library as json ---- 
+    #json.dump(comb_vect.vocabulary_, open('comb_vocab.json', mode = 'wb'))
+    # ---- save library as json ---- 
+
 
     print()
     print("Comb Vect - Vocabulary: after fit xform")
