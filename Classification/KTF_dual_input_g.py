@@ -91,7 +91,7 @@ def vectorize(good_path, mal_path):
     # ---- load library as .json file ----
 
     #perm_inputs_sparse = perm_vect.fit_transform(samples)
-    perm_inputs_sparse = perm_vect.transform(samples)
+    perm_inputs_sparse = perm_vect.fit_transform(samples)
     perm_inputs_dense = perm_inputs_sparse.todense()
     perm_inputs = np.array(perm_inputs_dense)
 
@@ -107,7 +107,7 @@ def vectorize(good_path, mal_path):
     # ---- load library as .json file ----
     
     #feat_inputs_sparse = feat_vect.fit_transform(samples)
-    feat_inputs_sparse = feat_vect.transform(samples)
+    feat_inputs_sparse = feat_vect.fit_transform(samples)
     feat_inputs_dense = feat_inputs_sparse.todense()
     feat_inputs = np.array(feat_inputs_dense)
 
@@ -124,7 +124,7 @@ def vectorize(good_path, mal_path):
 
     # original
     #comb_inputs_sparse = comb_vect.fit_transform(samples)
-    comb_inputs_sparse = comb_vect.transform(samples)
+    comb_inputs_sparse = comb_vect.fit_transform(samples)
     comb_inputs_dense = comb_inputs_sparse.todense()
     comb_inputs = np.array(comb_inputs_dense)
 
