@@ -1,4 +1,4 @@
-"""com.mola.playspace.android.domino.permission.PAYMENT_BROADCAST"": 9723"
+" ""com.mola.playspace.android.domino.permission.PAYMENT_BROADCAST"": 9723"
 " ""com.psd2filters.glitchart.permission.C2D_MESSAGE"": 11200"
 " ""com.hidating.hidatingapp.permission.C2D_MESSAGE"": 7253"
 " ""com.pereira.live.permission.C2D_MESSAGE"": 10867"
